@@ -1,2 +1,402 @@
 @import "tailwindcss";
 @plugin "daisyui";
+
+
+@theme {
+    --color-purple-50: #F1EEFD;
+    --color-purple-100: #E2DCFA;
+    --color-purple-200: #C6B9F5;
+    --color-purple-300: #A995F0;
+    --color-purple-400: #8D72EB;
+    --color-purple-default: #704FE6;
+    --color-purple-600: #5A3FB8;
+    --color-purple-700: #432F8A;
+    --color-purple-800: #2D205C;
+    --color-purple-900: #16102E;
+    --color-red-50: #FFE6E6;
+    --color-red-100: #FFCCCC;
+    --color-red-200: #FF9999;
+    --color-red-300: #FF6666;
+    --color-red-400: #FF3333;
+    --color-red-default: #FF0000;
+    --color-red-600: #CC0000;
+    --color-red-700: #990000;
+    --color-red-800: #660000;
+    --color-red-900: #330000;
+    --color-red-900: #330000;
+    --color-gray-50: #FAFAFA;
+    --color-gray-100: #DADADA;
+    --color-gray-200: #B4B4B4;
+    --color-gray-300: #8F8F8F;
+    --color-gray-400: #696969;
+    --color-gray-default: #444444;
+    --color-gray-600: #363636;
+    --color-gray-700: #292929;
+    --color-gray-800: #1B1B1B;
+    --color-gray-900: #0E0E0E;
+    --color-orange-50: #FFF0E6;
+    --color-orange-100: #FFE1CC;
+    --color-orange-200: #FFC399;
+    --color-orange-300: #FFA466;
+    --color-orange-400: #FF9633;
+    --color-orange-default: #FF8600;
+    --color-orange-600: #CC5300;
+    --color-orange-700: #993E00;
+    --color-orange-800: #662A00;
+    --color-orange-900: #331500;
+    --color-blue-50: #EEF6FF;
+    --color-blue-100: #DDEDFF;
+    --color-blue-200: #BCDBFF;
+    --color-blue-300: #9ACAFF;
+    --color-blue-400: #79B8FF;
+    --color-blue-default: #57A6FF;
+    --color-blue-600: #4685CC;
+    --color-blue-700: #346499;
+    --color-blue-800: #000466;
+    --color-blue-900: #112133;
+    --color-green-50: #EBF6F0;
+    --color-green-100: #D7ECE1;
+    --color-green-200: #AED9C4;
+    --color-green-300: #86C6A6;
+    --color-green-400: #5EB489;
+    --color-green-default: #36A16B;
+    --color-green-600: #2B8056;
+    --color-green-700: #206040;
+    --color-green-800: #15402B;
+    --color-green-900: #0B2015;
+    --color-yellow-50: #FDFCF0;
+    --color-yellow-100: #FCF9E1;
+    --color-yellow-200: #F9F2C2;
+    --color-yellow-300: #F5ECA4;
+    --color-yellow-400: #F2E585;
+    --color-yellow-default: #EFDF67;
+    --color-yellow-600: #BFB252;
+    --color-yellow-700: #8F863E;
+    --color-yellow-800: #605929;
+    --color-yellow-900: #302D15;
+    --color-pink-50: #FCE9F1;
+    --color-pink-100: #F9D2E2;
+    --color-pink-200: #F3A5C6;
+    --color-pink-300: #ED78A9;
+    --color-pink-400: #E74B8D;
+    --color-pink-default: #E11E70;
+    --color-pink-600: #B4185A;
+    --color-pink-700: #871243;
+    --color-pink-800: #5A0C2D;
+    --color-pink-900: #2D0616;
+    
+    --color-neutral-50: var(--color-gray-50);
+    --color-neutral-100: var(--color-gray-100);
+    --color-neutral-200: var(--color-gray-200);
+    --color-neutral-300: var(--color-gray-300);
+    --color-neutral-400: var(--color-gray-400);
+    --color-neutral-default: var(--color-gray-default);
+    --color-neutral-600: var(--color-gray-600);
+    --color-neutral-700: var(--color-gray-700);
+    --color-neutral-800: var(--color-gray-800);
+    --color-neutral-900: var(--color-gray-900);
+    --color-neutral-white: #FFFFFF;
+    --color-neutral-black: #000000;
+
+    --color-primary-50: var(--color-green-50);
+    --color-primary-100: var(--color-green-100);
+    --color-primary-200: var(--color-green-200);
+    --color-primary-300: var(--color-green-300);
+    --color-primary-400: var(--color-green-400);
+    --color-primary-default: var(--color-green-default);
+    --color-primary-600: var(--color-green-600);
+    --color-primary-700: var(--color-green-700);
+    --color-primary-800: var(--color-green-800);
+    --color-primary-900: var(--color-green-900);
+
+    --color-secondary-50: var(--color-yellow-50);
+    --color-secondary-100: var(--color-yellow-100);
+    --color-secondary-200: var(--color-yellow-200);
+    --color-secondary-300: var(--color-yellow-300);
+    --color-secondary-400: var(--color-yellow-400);
+    --color-secondary-default: var(--color-yellow-default);
+    --color-secondary-600: var(--color-yellow-600);
+    --color-secondary-700: var(--color-yellow-700);
+    --color-secondary-800: var(--color-yellow-800);
+    --color-secondary-900: var(--color-yellow-900);
+
+    --color-accent-50: var(--color-purple-50);
+    --color-accent-100: var(--color-purple-100);
+    --color-accent-200: var(--color-purple-200);
+    --color-accent-300: var(--color-purple-300);
+    --color-accent-400: var(--color-purple-400);
+    --color-accent-default: var(--color-purple-default);
+    --color-accent-600: var(--color-purple-600);
+    --color-accent-700: var(--color-purple-700);
+    --color-accent-800: var(--color-purple-800);
+    --color-accent-900: var(--color-purple-900);
+
+    --color-error-50: var(--color-red-50);
+    --color-error-100: var(--color-red-100);
+    --color-error-200: var(--color-red-200);
+    --color-error-300: var(--color-red-300);
+    --color-error-400: var(--color-red-400);
+    --color-error-default: var(--color-red-default);
+    --color-error-600: var(--color-red-600);
+    --color-error-700: var(--color-red-700);
+    --color-error-800: var(--color-red-800);
+    --color-error-900: var(--color-red-900);
+
+    --color-succes-50: var(--color-green-50);
+    --color-succes-100: var(--color-green-100);
+    --color-succes-200: var(--color-green-200);
+    --color-succes-300: var(--color-green-300);
+    --color-succes-400: var(--color-green-400);
+    --color-succes-default: var(--color-green-default);
+    --color-succes-600: var(--color-green-600);
+    --color-succes-700: var(--color-green-700);
+    --color-succes-800: var(--color-green-800);
+    --color-succes-900: var(--color-green-900);
+    
+    --color-warning-50: var(--color-yellow-50);
+    --color-warning-100: var(--color-yellow-100);
+    --color-warning-200: var(--color-yellow-200);
+    --color-warning-300: var(--color-yellow-300);
+    --color-warning-400: var(--color-yellow-400);
+    --color-warning-default: var(--color-yellow-default);
+    --color-warning-600: var(--color-yellow-600);
+    --color-warning-700: var(--color-yellow-700);
+    --color-warning-800: var(--color-yellow-800);
+    --color-warning-900: var(--color-yellow-900);
+
+    --color-information-50: var(--color-blue-50);
+    --color-information-100: var(--color-blue-100);
+    --color-information-200: var(--color-blue-200);
+    --color-information-300: var(--color-blue-300);
+    --color-information-400: var(--color-blue-400);
+    --color-information-default: var(--color-blue-default);
+    --color-information-600: var(--color-blue-600);
+    --color-information-700: var(--color-blue-700);
+    --color-information-800: var(--color-blue-800);
+    --color-information-900: var(--color-blue-900);
+
+    --border-width-0: 0px;
+    --border-width-sm: 24px;
+    --border-width-md: 48px;
+    --border-width-lg: 96px;
+
+    --rounded-0: 0px;
+    --rounded-sm: 8px;
+    --rounded-md: 16px;
+    --rounded-lg: 24px;
+    --rounded-xl: 32px;
+    --rounded-full: 9999px;
+
+    --color-surface-page: var(--color-neutral-white);
+    --color-surface-default: var(--color-neutral-50);
+    --color-surface-primary: var(--color-primary-default);
+    --color-surface-primary-hover: var(--color-primary-600);
+    --color-surface-primary-light: var(--color-primary-50);
+    --color-surface-disabled: var(--color-neutral-100);
+    --color-surface-succes: var(--color-succes-50);
+    --color-surface-warning: var(--color-warning-50);
+    --color-surface-error: var(--color-error-50);
+    --color-surface-information: var(--color-information-50);
+
+    --color-text-heading: var(--color-neutral-900);
+    --color-text-label: var(--color-neutral-default);
+    --color-text-body: var(--color-neutral-default);
+    --color-text-placeholder: var(--color-neutral-300);
+    --color-text-disabled: var(--color-neutral-300);
+    --color-text-on-action: var(--color-neutral-white);
+    --color-text-action: var(--color-primary-default);
+    --color-text-action-hover: var(--color-primary-600);
+    --color-text-succes: var(--color-succes-default);
+    --color-text-warning: var(--color-secondary-700);
+    --color-text-error: var(--color-error-default);
+    --color-text-information: var(--color-information-default);
+
+    --color-border-default: var(--color-neutral-100);
+    --color-border-action: var(--color-primary-default);
+    --color-border-action-hover: var(--color-primary-600);
+    --color-border-focused: var(--color-primary-default);
+    --color-border-disabled: var(--color-neutral-200);
+    --color-border-succes: var(--color-succes-400);
+    --color-border-warning: var(--color-warning-400);
+    --color-border-error: var(--color-error-400);
+    --color-border-information: var(--color-information-400);
+    
+    --color-icon-default: var(--color-neutral-default);
+    --color-icon-action: var(--color-primary-default);
+    --color-icon-action-hover: var(--color-primary-600);
+    --color-icon-on-action: var(--color-neutral-white);
+    --color-icon-disabled: var(--color-neutral-200);
+    --color-icon-information: var(--color-information-default);
+    --color-icon-warning: var(--color-warning-700);
+    --color-icon-error: var(--color-error-default);
+    --color-icon-succes: var(--color-succes-default);
+}
+
+.h1-heading {
+    font-family: Figtree, sans-serif;
+    src: url("./assets/font/Figtree-VariableFont_wght.ttf") format("truetype");
+    font-style: normal;
+    font-weight: semibold;
+    font-size: 32px;
+    letter-spacing: -2%;
+}
+
+.h1-heading {
+    font-family: Figtree, sans-serif;
+    src: url("./assets/font/Figtree-VariableFont_wght.ttf") format("truetype");
+    font-style: normal;
+    font-weight: semibold;
+    font-size: 24  px;
+    letter-spacing: -2%;
+}
+
+.lg-default {
+    font-family: Figtree, sans-serif;
+    src: url("./assets/font/Figtree-VariableFont_wght.ttf") format("truetype");
+    font-style: normal;
+    font-weight: medium;
+    font-size: 18px;
+    line-height: 28px;
+}
+   
+.lg-underline {
+    font-family: Figtree, sans-serif;
+    src: url("./assets/font/Figtree-VariableFont_wght.ttf") format("truetype");
+    font-style: normal;
+    font-weight: medium;
+    font-size: 18px;
+    line-height: auto;
+    letter-spacing: -2%;
+    text-decoration: underline;
+}
+
+.lg-semibold {
+    font-family: Figtree, sans-serif;
+    src: url("./assets/font/Figtree-VariableFont_wght.ttf") format("truetype");
+    font-style: normal;
+    font-weight: semibold;
+    font-size: 18px;
+    line-height: auto;
+    letter-spacing: -2%;
+}
+
+.label-default {
+    font-family: Figtree, sans-serif;
+    src: url("./assets/font/Figtree-VariableFont_wght.ttf") format("truetype");
+    font-style: normal;
+    font-weight: medium;
+    font-size: 14px;
+    line-height: 14px;
+}
+   
+.label-underline {
+    font-family: Figtree, sans-serif;
+    src: url("./assets/font/Figtree-VariableFont_wght.ttf") format("truetype");
+    font-style: normal;
+    font-weight: medium;
+    font-size: 14px;
+    line-height: 14px;
+    text-decoration: underline;
+}
+
+.label-semibold {
+    font-family: Figtree, sans-serif;
+    src: url("./assets/font/Figtree-VariableFont_wght.ttf") format("truetype");
+    font-style: normal;
+    font-weight: semibold;
+    font-size: 14px;
+    line-height: 14px;
+}
+
+.md-default {
+    font-family: Figtree, sans-serif;
+    src: url("./assets/font/Figtree-VariableFont_wght.ttf") format("truetype");
+    font-style: normal;
+    font-weight: medium;
+    font-size: 16px;
+    line-height: 140%;
+    letter-spacing: -2%;
+}
+   
+.md-underline {
+    font-family: Figtree, sans-serif;
+    src: url("./assets/font/Figtree-VariableFont_wght.ttf") format("truetype");
+    font-style: normal;
+    font-weight: medium;
+    font-size: 16px;
+    line-height: auto;
+    letter-spacing: -2%;
+    text-decoration: underline;
+}
+
+.md-semibold {
+    font-family: Figtree, sans-serif;
+    src: url("./assets/font/Figtree-VariableFont_wght.ttf") format("truetype");
+    font-style: normal;
+    font-weight: semibold;
+    font-size: 16px;
+    line-height: auto;
+    letter-spacing: -2%;
+}
+
+.sm-default {
+    font-family: Figtree, sans-serif;
+    src: url("./assets/font/Figtree-VariableFont_wght.ttf") format("truetype");
+    font-style: normal;
+    font-weight: medium;
+    font-size: 14px;
+    line-height: auto;
+    letter-spacing: -2%;
+}
+   
+.sm-underline {
+    font-family: Figtree, sans-serif;
+    src: url("./assets/font/Figtree-VariableFont_wght.ttf") format("truetype");
+    font-style: normal;
+    font-weight: medium;
+    font-size: 14px;
+    line-height: auto;
+    letter-spacing: -2%;
+    text-decoration: underline;
+}
+
+.sm-semibold {
+    font-family: Figtree, sans-serif;
+    src: url("./assets/font/Figtree-VariableFont_wght.ttf") format("truetype");
+    font-style: normal;
+    font-weight: semibold;
+    font-size: 14px;
+    line-height: auto;
+    letter-spacing: -2%;
+}
+
+.xs-default {
+    font-family: Figtree, sans-serif;
+    src: url("./assets/font/Figtree-VariableFont_wght.ttf") format("truetype");
+    font-style: normal;
+    font-weight: medium;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0.12px;
+}
+   
+.xs-underline {
+    font-family: Figtree, sans-serif;
+    src: url("./assets/font/Figtree-VariableFont_wght.ttf") format("truetype");
+    font-style: normal;
+    font-weight: medium;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0.12px;
+    text-decoration: underline;
+}
+
+.xs-semibold {
+    font-family: Figtree, sans-serif;
+    src: url("./assets/font/Figtree-VariableFont_wght.ttf") format("truetype");
+    font-style: normal;
+    font-weight: semibold;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0.12px;
+}
