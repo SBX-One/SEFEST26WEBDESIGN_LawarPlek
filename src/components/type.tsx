@@ -7,6 +7,10 @@ export type RIGOBTNPROPS = {
 export type WWSCardProps = {
     title: string,
     date: string,
-    desc: string,
-    volume: string
+    desc?: string,
+    volume?: string,
+}
+
+export type logoPillProps = {
+    text: string
 }
