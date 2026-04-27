@@ -3,6 +3,7 @@
 
 body {
     overflow-x: hidden;
+    background-color: var(--color-neutral-white);
 }
 
 .bg-diagonal-line {
@@ -191,12 +192,12 @@ body {
     --border-width-md: 48px;
     --border-width-lg: 96px;
 
-    --rounded-0: 0px;
-    --rounded-sm: 8px;
-    --rounded-md: 16px;
-    --rounded-lg: 24px;
-    --rounded-xl: 32px;
-    --rounded-full: 9999px;
+    --radius-0: 0px;
+    --radius-sm: 8px;
+    --radius-md: 16px;
+    --radius-lg: 24px;
+    --radius-xl: 32px;
+    --radius-full: 9999px;
 
     --color-surface-page: var(--color-neutral-white);
     --color-surface-default: var(--color-neutral-50);

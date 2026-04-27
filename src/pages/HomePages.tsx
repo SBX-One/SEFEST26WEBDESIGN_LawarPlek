@@ -3,6 +3,7 @@ import PageHeading from "../view/HomePage/PageHeading"
 import BannerPartner from "../view/HomePage/BannerPartner"
 import WhatWeSolve from "../view/HomePage/WhatWeSolve"
 import HowWeSolve from "../view/HomePage/HowWeSolve"
+import GrigoFoundation from "../view/HomePage/GrigoFoundation"
 
 export default function HomePages() {
     return (
@@ -12,6 +13,7 @@ export default function HomePages() {
             <BannerPartner />
             <WhatWeSolve />
             <HowWeSolve />
+            <GrigoFoundation />
             {/* <h1>Home Pages</h1> */}
         </div>
     )
