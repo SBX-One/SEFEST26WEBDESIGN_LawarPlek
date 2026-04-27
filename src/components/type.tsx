@@ -14,3 +14,10 @@ export type WWSCardProps = {
 export type logoPillProps = {
     text: string
 }
+
+export type RigoImageCardProps = {
+    title: string,
+    date: string,
+    image: string,
+    customImageClass?: string
+}
