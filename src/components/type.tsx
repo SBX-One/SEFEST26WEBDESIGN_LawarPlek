@@ -1,3 +1,5 @@
+import type { CSSProperties } from 'react';
+
 export type RIGOBTNPROPS = {
     inv : boolean,
     text : string,
@@ -25,4 +27,8 @@ export type RigoImageCardProps = {
 export type RigoAccordianProps = {
     title: string,
     content: string
+}
+
+export type seperatorProps = {
+    height? : CSSProperties['height'];
 }

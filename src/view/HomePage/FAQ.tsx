@@ -1,5 +1,6 @@
 import LogoPill from "../../components/LogoPill"
 import RigoAccordian from "../../components/RigoAccordian"
+// import Seperator from "../../components/seperator"
 
 export default function FAQ() {
     const FAQData = [
@@ -27,7 +28,7 @@ export default function FAQ() {
     ]
 
     return (
-        <div className="mt-32">
+        <div className="mt-32 pb-32">
             <LogoPill text="Grigo Foundation" />
             <div className="flex flex-col gap-8 mt-4 pb-16">
                 <h1 className="h1-heading font-bold text-text-heading">
@@ -43,6 +44,7 @@ export default function FAQ() {
                     <RigoAccordian key={index} {...item} />
                 ))}
             </div>
+            {/* <Seperator height={50} /> */}
         </div>
     )
 }
