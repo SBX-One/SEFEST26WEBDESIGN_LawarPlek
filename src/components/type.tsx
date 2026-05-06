@@ -32,3 +32,8 @@ export type RigoAccordianProps = {
 export type seperatorProps = {
     height? : CSSProperties['height'];
 }
+
+export type DropDownProps = {
+    title: string,
+    links: string
+}
