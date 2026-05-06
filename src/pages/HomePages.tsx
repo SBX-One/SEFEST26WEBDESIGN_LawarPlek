@@ -5,7 +5,8 @@ import WhatWeSolve from "../view/HomePage/WhatWeSolve"
 import HowWeSolve from "../view/HomePage/HowWeSolve"
 import GrigoFoundation from "../view/HomePage/GrigoFoundation"
 import FAQ from "../view/HomePage/FAQ"
-import Seperator from "../components/seperator"
+// import Seperator from "../components/seperator"
+import Footer from "../components/footer"
 
 export default function HomePages() {
     return (
@@ -17,7 +18,7 @@ export default function HomePages() {
             <HowWeSolve />
             <GrigoFoundation />
             <FAQ />
-            <Seperator height={"50px"} />
+            <Footer />
             {/* <h1>Home Pages</h1> */}
         </div>
     )
