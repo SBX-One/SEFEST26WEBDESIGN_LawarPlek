@@ -41,7 +41,7 @@ export default function HowWeSolve() {
                     <LogoPill text="How We Solve" />
                 </div>
                 <h1 className="h1-heading text-text-heading text-center">
-                    Platform Praktis <br /> Mengubah <br /> Sampah Rumah  Menjadi Saldo Belanja
+                    Platform Praktis <br className="md:hidden" /> Mengubah <br /> Sampah Rumah  Menjadi Saldo Belanja
                 </h1>
             </div>
             <div className="flex flex-col gap-5 ">

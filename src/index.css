@@ -427,3 +427,9 @@ body {
     line-height: 18px;
     letter-spacing: 0.12px;
 }
+
+.leading-normal {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+}

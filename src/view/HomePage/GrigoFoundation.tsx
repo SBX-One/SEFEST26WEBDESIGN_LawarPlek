@@ -1,8 +1,11 @@
 import LogoPill from "../../components/LogoPill"
 import RigoButton from "../../components/RigoButton"
 import RigoCard from "../../components/RigoCard"
+import CustomClassFunction from "../../function/CustomClassFunction"
 
 export default function GrigoFoundation() {
+    CustomClassFunction({CustomWidth: 768, CustomClass: "display", divRef:"mainTitle", RemoveCustomClass: "h1-heading"});
+
     const GrigoFoundationData = [
         {
             title: "Total Pengguna",
@@ -30,10 +33,10 @@ export default function GrigoFoundation() {
                 <div className="w-fit">
                     <LogoPill text="Grigo Foundation" />
                 </div>
-                <h1 className="h1-heading text-text-heading text-center py-8"> 
+                <h1 id="mainTitle" className="h1-heading text-text-heading text-center py-8"> 
                     Mulai Kumpulkan Sampah dan Tukar Untuk Barang Baru
                 </h1>
-                <div className="flex flex-col gap-4 pt-6 pb-16">
+                <div className="flex flex-col md:flex-row md:justify-center gap-4 pt-6 pb-16">
                     <RigoButton text="Mulai Sekarang" inv={true} />
                     <RigoButton text="Lihat Demo" inv={false} />
             </div>

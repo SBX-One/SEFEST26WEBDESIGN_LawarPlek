@@ -34,7 +34,7 @@ export default function PageHeading() {
                 Ekosistem sirkular pertama yang menjemput sampah di depan pintu Anda dan mengubahnya menjadi poin belanja di E-commerce eksklusif.
             </p>
 
-            <div className="flex gap-4 flex-col">
+            <div className="flex gap-4 flex-col md:flex-row md:mx-auto">
                 {HeadingPageBtnList.map((btn, i) => (
                     <RigoButton key={i} inv={btn.inv} text={btn.text} />
                 ))}

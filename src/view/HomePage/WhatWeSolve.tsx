@@ -1,7 +1,10 @@
 import WWSCard from "../../components/RigoCard"
 import LogoPill from "../../components/LogoPill"
+import CustomClassFunction from "../../function/CustomClassFunction"
 
 export default function WhatWeSolve() {
+    CustomClassFunction({CustomWidth: 768, CustomClass: "leading-normal", divRef:"WWSPara", RemoveCustomClass: "md-default"});
+
     const WWSCardData = [
         {
             title: "Total Volume Sampah",
@@ -29,7 +32,7 @@ export default function WhatWeSolve() {
             <LogoPill text="What We Solve" />
             <div className="flex flex-col gap-6 mt-4 pb-16 border-b border-border-default">
                 <h1 className="h1-heading font-medium text-text-heading">Sampah terus meluap dengan pengelolaan konvensional.</h1>
-                <p className="md-default text-text-placeholder">
+                <p id="WWSPara" className="md-default text-text-placeholder">
                     Volume sampah terus meningkat, namun sistem pengelolaan masih konvensional.
                 </p>
             </div>

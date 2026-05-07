@@ -63,22 +63,23 @@ export default function Footer() {
                 <Seperator height={"50px"} />
             </div>
 
-            <div className="pb-10 border-b-2 border-border-default mb-16">
-                <img src={logo} alt="Company Logo" className="relative " />
+            <div className="pb-10 border-b-2 flex flex-row justify-between  border-border-default mb-16">
+                <img src={logo} alt="Company Logo" className="relative md:w-57.75" />
+                <p className="hidden md:block sm-default text-right w-80.5 text-text-placeholder">GRIGO adalah platform ekonomi sirkular yang membantu mengelola sampah menjadi saldo belanja.</p>
             </div>
 
-            <div className="label-underline text-text-body flex flex-row flex-wrap justify-between ">
+            <div className="label-underline grid grid-cols-2 text-text-body justify-between">
                 {linkList.map((link, i) => (
                     <div key={i} className="mb-5">
                         {linkComponent(link)}
                     </div>
                 ))}
-                <div className="mt-8 flex flex-row flex-wrap justify-between">
                     {linkList2.map((link, i) => (
                         <div key={i} className="mb-5">
                             {linkComponent(link)}
                         </div>
                     ))}
+                <div className="mt-8 flex flex-row flex-wrap justify-between">
                 </div>
             </div>
 
