@@ -246,15 +246,18 @@ body {
     --text-md-defult: 16px;
 }
 
-.display {
-    font-family: Figtree, sans-serif;
-    src: url("./assets/font/Figtree-VariableFont_wght.ttf") format("truetype");
-    font-style: normal;
-    font-weight: semibold;
-    font-size: 60px;
-    line-height: 60px;
-    letter-spacing: -1.5px;
+@layer utilities {
+    .display {
+        font-family: Figtree, sans-serif;
+        src: url("./assets/font/Figtree-VariableFont_wght.ttf") format("truetype");
+        font-style: normal;
+        font-weight: semibold;
+        font-size: 60px;
+        line-height: 60px;
+        letter-spacing: -1.5px;
+    }
 }
+
 
 .h1-heading {
     font-family: Figtree, sans-serif;

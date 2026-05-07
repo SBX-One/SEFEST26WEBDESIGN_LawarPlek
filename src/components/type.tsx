@@ -37,3 +37,10 @@ export type DropDownProps = {
     title: string,
     links: string
 }
+
+export type CustomClassProps = {
+    CustomWidth: number,
+    CustomClass: string,
+    RemoveCustomClass?: string,
+    divRef: string
+}
