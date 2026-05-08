@@ -33,7 +33,7 @@ export default function DropDown() {
         };
     }, []);
     return (  
-        <div className="absolute w-full left-0 h-full z-100 bg-neutral-white px-5 gap-6 flex flex-col pt-16">
+        <div className="absolute w-full left-0 h-full z-100 bg-neutral-white px-5 md:px-15 gap-6 md:gap-12 flex flex-col pt-16">
             {linksList.map((link, i) => (
                 <DropDownLink key={i} title={link.title} links={link.links} />
             ))}
