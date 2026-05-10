@@ -1,4 +1,4 @@
-import type { CustomClassProps } from "../components/type";
+import type { CustomClassProps } from "../type/type";
 import { useEffect } from "react";
 
 export default function CustomClassFunction({ CustomWidth, CustomClass, divRef, RemoveCustomClass }: CustomClassProps) {

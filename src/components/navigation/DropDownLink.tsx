@@ -1,6 +1,6 @@
-import type { DropDownProps } from "./type";
+import type { DropDownProps } from "../../type/type";
 // import arrow from '../assets/svg/arrow-up-right.svg'
-import ArrowIcon from "./ArrowIcon";
+import ArrowIcon from "../ui/icons/ArrowIcon";
 
 export default function DropDownLinks({ title, links }: DropDownProps) {
     return (

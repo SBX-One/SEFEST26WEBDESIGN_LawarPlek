@@ -1,5 +1,5 @@
 import HomeBanner from "../../assets/webP/HomeImage.webp"
-import PartnerBanner from "../../components/PartnerBanner"
+import PartnerBanner from "../../components/common/PartnerBanner"
 import PartnerBannerTablet from "../../assets/webP/partnerImage.webp"
 export default function BannerPartner() {
     return (

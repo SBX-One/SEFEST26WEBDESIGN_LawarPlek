@@ -1,7 +1,7 @@
-import Partner1 from "../assets/svg/Partner1.svg"
-import Partner2 from "../assets/svg/Partner2.svg"
-import Partner3 from "../assets/svg/Partner3.svg"
-import Partner4 from "../assets/svg/Partner4.svg"
+import Partner1 from "../../assets/svg/Partner1.svg"
+import Partner2 from "../../assets/svg/Partner2.svg"
+import Partner3 from "../../assets/svg/Partner3.svg"
+import Partner4 from "../../assets/svg/Partner4.svg"
 
 export default function PartnerBanner() {
     const PartnerList = [

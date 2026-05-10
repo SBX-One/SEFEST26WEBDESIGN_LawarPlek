@@ -1,6 +1,6 @@
 import DropDownLink from "./DropDownLink"
 import { useEffect} from "react"
-import linksList from "./ListData";
+import linksList from "../../data/ListData";
 
 export default function DropDown() {
 

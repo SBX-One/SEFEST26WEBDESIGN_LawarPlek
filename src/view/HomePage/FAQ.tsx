@@ -1,5 +1,5 @@
-import LogoPill from "../../components/LogoPill"
-import RigoAccordian from "../../components/RigoAccordian"
+import LogoPill from "../../components/common/LogoPill"
+import RigoAccordian from "../../components/common/RigoAccordian"
 import CustomClassFunction from "../../function/CustomClassFunction" 
 
 export default function FAQ() {

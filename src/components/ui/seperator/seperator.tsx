@@ -1,4 +1,4 @@
-import type { seperatorProps } from "./type"
+import type { seperatorProps } from "../../../type/type"
 
 export default function Seperator({ height }: seperatorProps) {
     return (

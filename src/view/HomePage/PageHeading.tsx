@@ -1,5 +1,5 @@
 import logo from "../../assets/svg/LogoMain.svg"
-import RigoButton from "../../components/RigoButton"
+import RigoButton from "../../components/ui/button/RigoButton"
 import CustomClassFunction from "../../function/CustomClassFunction"
 // import { useRef } from "react"
 
@@ -22,7 +22,7 @@ export default function PageHeading() {
 
 
     return (
-        <div className="flex flex-col gap-8 desktop:w-190.25 mx-auto mt-39.25">
+        <div className="flex flex-col gap-8 desktop:w-190.25 mx-auto desktop:mt-39.25 mt-20">
             <div className="flex gap-2.5 px-4 py-3 justify-center">
                 <img src={logo} alt="logo" />
                 <h1 className="sm-semibold text-text-label">Grigo Foundation</h1>

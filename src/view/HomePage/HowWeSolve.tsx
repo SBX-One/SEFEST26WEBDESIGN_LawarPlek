@@ -1,5 +1,5 @@
-import LogoPill from "../../components/LogoPill"
-import RigoImageCard from "../../components/RigoImageCard"
+import LogoPill from "../../components/common/LogoPill"
+import RigoImageCard from "../../components/common/RigoImageCard"
 
 import image1 from "../../assets/webP/HowWeSolveImage1.webp"
 import image2 from "../../assets/webP/HowWeSolveImage2.webp"

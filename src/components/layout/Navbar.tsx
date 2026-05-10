@@ -1,11 +1,11 @@
-import Logo from "../assets/svg/CompanyLogo.svg"
-import Burger from "../assets/svg/Burger.svg"
-import DropDown from "./DropDown"
-import chevron from "../assets/svg/chevron-right.svg"
-import ListData from "./ListData"
+import Logo from "../../assets/svg/CompanyLogo.svg"
+import Burger from "../../assets/svg/Burger.svg"
+import DropDown from "../navigation/DropDown"
+import chevron from "../../assets/svg/chevron-right.svg"
+import ListData from "../../data/ListData"
 
 import {useState} from "react"
-import RigoButton from "./RigoButton"
+import RigoButton from "../ui/button/RigoButton"
 
 export default function Navbar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);

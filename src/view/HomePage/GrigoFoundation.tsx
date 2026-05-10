@@ -1,6 +1,6 @@
-import LogoPill from "../../components/LogoPill"
-import RigoButton from "../../components/RigoButton"
-import RigoCard from "../../components/RigoCard"
+import LogoPill from "../../components/common/LogoPill"
+import RigoButton from "../../components/ui/button/RigoButton"
+import RigoCard from "../../components/common/RigoCard"
 import CustomClassFunction from "../../function/CustomClassFunction"
 
 export default function GrigoFoundation() {

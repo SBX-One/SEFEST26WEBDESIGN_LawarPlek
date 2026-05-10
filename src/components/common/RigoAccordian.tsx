@@ -1,6 +1,6 @@
 import { useState } from "react"
-import type { RigoAccordianProps } from "./type"
-import chevronDown from "../assets/svg/fi_chevron-down.svg"
+import type { RigoAccordianProps } from "../../type/type"
+import chevronDown from "../../assets/svg/fi_chevron-down.svg"
 
 export default function RigoAccordian({ title, content }: RigoAccordianProps) {
     const [isOpen, setIsOpen] = useState(false)

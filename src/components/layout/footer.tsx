@@ -1,9 +1,9 @@
-import logo from "../assets/svg/CompanyLogo.svg"
-import YTlogo from "../assets/svg/logo-yt.svg"
-import IGlogo from "../assets/svg/logo-ig.svg"
-import INlogo from "../assets/svg/logo-in.svg"
+import logo from "../../assets/svg/CompanyLogo.svg"
+import YTlogo from "../../assets/svg/logo-yt.svg"
+import IGlogo from "../../assets/svg/logo-ig.svg"
+import INlogo from "../../assets/svg/logo-in.svg"
 
-import Seperator from "./seperator"
+import Seperator from "../ui/seperator/seperator"
 
 export default function Footer() {
     const logoList = [YTlogo, IGlogo, INlogo]

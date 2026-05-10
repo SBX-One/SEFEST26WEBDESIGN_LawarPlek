@@ -1,5 +1,5 @@
-import WWSCard from "../../components/RigoCard"
-import LogoPill from "../../components/LogoPill"
+import WWSCard from "../../components/common/RigoCard"
+import LogoPill from "../../components/common/LogoPill"
 import CustomClassFunction from "../../function/CustomClassFunction"
 
 export default function WhatWeSolve() {

@@ -1,4 +1,4 @@
-import type { RIGOBTNPROPS } from "./type"
+import type { RIGOBTNPROPS } from "../../../type/type"
 
 export default function RigoButton({ inv, text, icon = true }: RIGOBTNPROPS) {
     return (
