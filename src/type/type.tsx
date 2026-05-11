@@ -45,3 +45,7 @@ export type CustomClassProps = {
     RemoveCustomClass?: string,
     divRef: string
 }
+
+export type NavbarProps = {
+    mode: string;
+}
