@@ -49,3 +49,9 @@ export type CustomClassProps = {
 export type NavbarProps = {
     mode: string;
 }
+
+export type SimpleButtonProps = {
+    text: string;
+    icon?: string;
+    onClick: () => void;
+}

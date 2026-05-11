@@ -1,11 +1,33 @@
 import Search  from "../../components/common/Search"
 import BalanceViewer from "../../components/common/BalanceViewer"
+import SimpleButton from "../../components/ui/button/SimpleButton"
+import arrowUpDown from "../../assets/svg/arrow-up-down.svg"
 
 export default function Balance() {
+    const SimpleButtonList = [
+        {
+            text : "Transfer",
+            icon : arrowUpDown,
+            onClick : () => console.log("Transfer clicked")
+        },
+        {
+            text : "Transfer",
+            icon : arrowUpDown,
+            onClick : () => console.log("Transfer clicked")
+        },
+    ]
+
     return (
-        <div>
-            <Search />
-            <BalanceViewer />
+        <div className="pt-5 pb-15 border-b-2 border-border-default mt-10">
+            <div className="flex flex-col gap-5">
+                <Search />
+                <BalanceViewer />
+            </div>
+            <div className="grid grid-cols-2 gap-3 mt-4">
+                {SimpleButtonList.map((button, i) => (
+                    <SimpleButton key={i} {...button} />
+                ))}
+            </div>
         </div>
     )
 }

@@ -1,0 +1,12 @@
+import type { SimpleButtonProps } from "../../../type/type"
+
+export default function SimpleButton({ text, icon, onClick }: SimpleButtonProps) {
+    return (
+        <div>
+            <button onClick={onClick} className="flex flex-row gap-2 items-center py-3.5 rounded-2xl border-2 border-border-default w-full justify-center">
+                {icon && <img src={icon} alt="icon" className="w-4 h-4 mr-2" />}
+                <h1 className="leading-normal text-text-action">{text}</h1>
+            </button>
+        </div>
+    )
+}
