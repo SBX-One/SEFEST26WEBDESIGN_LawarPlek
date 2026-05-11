@@ -1,4 +1,4 @@
-import type { CSSProperties } from 'react';
+import type { ReactNode, CSSProperties } from "react"
 
 export type RIGOBTNPROPS = {
     inv : boolean,
@@ -61,4 +61,17 @@ export type ProductCardProps = {
     title: string;
     img: string;
     harga: number;
+}
+
+export type SimplePillProps = {
+    text: string;
+}
+
+export type SimpleCardProps = {
+    title: string;
+    desc: string;
+    button?: boolean;
+    icon?: ReactNode;
+    numSampah: number;
+    setNumSampah: (updater: (prev: number) => number) => void;
 }

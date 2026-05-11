@@ -1,0 +1,11 @@
+import Menu from "../view/CleanYourTrash/Menu"
+import SampahUmum from "../view/CleanYourTrash/SampahUmum"
+
+export default function CleanYourTrash() {
+    return (
+        <div className="p-5">
+            <Menu />
+            <SampahUmum />
+        </div>
+    )
+}
