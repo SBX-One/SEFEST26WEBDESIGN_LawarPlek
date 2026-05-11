@@ -5,15 +5,5 @@
                 "balanceNominal" : 1000000
             }
         ]
-    },
-    {
-        "hargaProduk" : 
-        [
-            {
-                "harga" : 20000,
-                "nama" : "Le Mineral 1L",
-                "image" : "imageP1"     
-            }
-        ]
     }
 ]

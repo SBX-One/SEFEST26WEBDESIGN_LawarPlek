@@ -51,13 +51,14 @@ export type NavbarProps = {
 }
 
 export type SimpleButtonProps = {
-    text: string;
+    text?: string;
     icon?: string;
     onClick: () => void;
 }
 
 export type ProductCardProps = {
+    id: number;
     title: string;
-    image: string;
-    harga: string;
+    img: string;
+    harga: number;
 }

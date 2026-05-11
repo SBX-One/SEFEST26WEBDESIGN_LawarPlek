@@ -19,7 +19,7 @@ export default function Bantuan() {
     ]
 
     return (
-        <div className="mt-10 overflow-hidden">
+        <div className="mt-10 pb-10 border-b-2 border-border-default overflow-hidden w-screen left-0 relative ml-[calc(50%-50vw)] px-5">
             <h1 className="sm-semibold text-text-body mb-4">Bantuan & Panduan</h1>
 
             <div className="flex flex-row overflow-x-auto snap-x snap-mandatory scrollbar-hide snap-always gap-4 -scroll-pl-5 ">
