@@ -2,6 +2,7 @@ import Search  from "../../components/common/Search"
 import BalanceViewer from "../../components/common/BalanceViewer"
 import SimpleButton from "../../components/ui/button/SimpleButton"
 import arrowUpDown from "../../assets/svg/arrow-up-down.svg"
+import shoppingCart from '../../assets/svg/shopping-cart-green.svg'
 
 export default function Balance() {
     const SimpleButtonList = [
@@ -11,8 +12,8 @@ export default function Balance() {
             onClick : () => console.log("Transfer clicked")
         },
         {
-            text : "Transfer",
-            icon : arrowUpDown,
+            text : "Shop",
+            icon : shoppingCart,
             onClick : () => console.log("Transfer clicked")
         },
     ]

@@ -4,7 +4,7 @@ import plus from "../../assets/svg/plus.svg";
 
 export default function ProdctList() {
     return (
-        <div>
+        <div className="mb-32.5">
             <div className="flex flex-row flex-wrap justify-between gap-y-10 relative">
                 {products.map(product => (
                     <div className="relative">

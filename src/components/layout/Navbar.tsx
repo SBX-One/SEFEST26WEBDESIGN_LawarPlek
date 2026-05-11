@@ -14,7 +14,7 @@ export default function Navbar({ mode }: NavbarProps) {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     return (
-        <div>
+        <div className="sticky top-0 z-200">
             <div className={`bg-neutral-white left-0 w-screen ml-[calc(50%-50vw)] py-10 desktop:py-7.5 md:py-14 px-5 md:px-15 xl:px-30 flex justify-between border-b-2 border-[#DEDEDE] items-center ${mode === 'home' ? 'max-h-21' : ''}`}>
                 <img src={mode === 'home' ? mainLogo : Logo} alt="Company Logo" className={`${mode === 'home' ? 'w-6' : ''}`} />
                 <div className="flex flex-row items-center">
