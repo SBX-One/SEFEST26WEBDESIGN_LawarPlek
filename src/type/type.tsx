@@ -55,3 +55,9 @@ export type SimpleButtonProps = {
     icon?: string;
     onClick: () => void;
 }
+
+export type ProductCardProps = {
+    title: string;
+    image: string;
+    harga: string;
+}
