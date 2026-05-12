@@ -80,3 +80,8 @@ export type TabsProps = {
     setCurrentMode: Dispatch<SetStateAction<boolean>>;
     currentMode: boolean;
 }
+
+export type MenuProps = {
+    TotalHarga: number;
+    setTotalHarga: Dispatch<SetStateAction<number>>
+}
