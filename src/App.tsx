@@ -4,6 +4,7 @@ import Home from "./pages/Home"
 import CleanYourTrash from "./pages/CleanYourTrash";
 import TrashCheckout from "./pages/TrashCheckout";
 import { TrashProvider } from "./context/TrashContext";
+import Receipt from "./pages/Receipt";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <Route path="/Home" element={<Home />} />
           <Route path="/ScanYourTrash" element={<CleanYourTrash />} />
           <Route path="/TrashCheckout" element={<TrashCheckout />} />
+          <Route path="/Receipt" element={<Receipt />} />
         </Routes>
       </BrowserRouter>
     </TrashProvider>

@@ -31,7 +31,7 @@ export default function Balance() {
             </div>
             <div>
                 {isOrder && (
-                    <div className="text-center py-5 border-2 relative border-border-default rounded-2xl object-cover overflow-hidden mt-2">
+                    <div onClick={() => navigate('/Receipt')} className="text-center py-5 border-2 relative border-border-default rounded-2xl object-cover overflow-hidden mt-2">
                         <p className="xs-default text-text-placeholder">DK 2008 P</p>
                         <h2 className="md-semibold text-text-label">~ 12 Minutes</h2>
                         <div className="absolute bottom-0 w-full h-2 bg-surface-primary" />
