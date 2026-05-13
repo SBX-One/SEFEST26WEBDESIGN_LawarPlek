@@ -7,6 +7,8 @@ interface TrashContextType {
     setTotalHarga: (harga: number) => void;
     completedHarga: number;
     setCompletedHarga: (harga: number) => void;
+    numSampah: number[];
+    setNumSampah: (sampah: number[]) => void;
 }
 
 const TrashContext = createContext<TrashContextType | undefined>(undefined);
@@ -14,9 +16,10 @@ const TrashContext = createContext<TrashContextType | undefined>(undefined);
 export function TrashProvider({ children }: { children: ReactNode }) {
     const [totalHarga, setTotalHarga] = useState<number>(0);
     const [completedHarga, setCompletedHarga] = useState<number>(0);
+    const [numSampah, setNumSampah] = useState<number[]>([0, 0, 0, 0]);
 
     return (
-        <TrashContext.Provider value={{ totalHarga, setTotalHarga, completedHarga, setCompletedHarga }}>
+        <TrashContext.Provider value={{ totalHarga, setTotalHarga, completedHarga, setCompletedHarga, numSampah, setNumSampah }}>
             {children}
         </TrashContext.Provider>
     );

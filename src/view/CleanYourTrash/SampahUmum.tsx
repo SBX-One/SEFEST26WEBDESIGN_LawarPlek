@@ -1,11 +1,13 @@
 import SimplePill from "../../components/common/SimplePill"
 import ArrowIcon from "../../components/ui/icons/ArrowIcon"
 import SimpleCard from "../../components/common/SimpleCard";
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import { useTrash } from "../../context/TrashContext";
+import { useHandleSetNum } from "../../type/handleSetNumt";
 
 export default function SampahUmum() {
-    const { setTotalHarga } = useTrash();
+    const { setTotalHarga, numSampah } = useTrash();
+    const handleSetNum = useHandleSetNum();
     
     const SampahUmumList = [
         {
@@ -30,9 +32,6 @@ export default function SampahUmum() {
             icon: <ArrowIcon className="text-icon-action w-4 h-4" /> 
         },
     ]
-    const [numSampah, setNumSampah] = useState<number[]>(
-        Array(SampahUmumList.length).fill(0)
-    );
 
     const totalSsampah = numSampah.reduce((acc, val) => acc + val, 0);
     
@@ -45,14 +44,6 @@ export default function SampahUmum() {
     useEffect(() => {
         setTotalHarga(totalHarga);
     }, [totalHarga, setTotalHarga]);
-
-    const handleSetNUm = (index: number) => (updater: (prev: number) => number) => {
-        setNumSampah(prev => {
-            const updated = [...prev];
-            updated[index] = updater(updated[index]);
-            return updated
-        })
-    }
     
     return (
         <div>
@@ -64,7 +55,7 @@ export default function SampahUmum() {
                 <div className="flex flex-row flex-wrap justify-between gap-y-3 mt-5">
                     {SampahUmumList.map((item, i) => (
                         <div key={i}>
-                            <SimpleCard {...item} numSampah={numSampah[i]} setNumSampah={handleSetNUm(i)} />
+                            <SimpleCard {...item} numSampah={numSampah[i]} setNumSampah={handleSetNum(i)} />
                         </div>
                     ))}
                 </div>
