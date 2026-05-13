@@ -99,3 +99,9 @@ export type BarProps = {
     iconR?: string;
     iconL?: string;
 }
+
+export type DropDownBarProps = {
+    title: string;
+    icon: string;
+    onclick?: () => void;
+}
