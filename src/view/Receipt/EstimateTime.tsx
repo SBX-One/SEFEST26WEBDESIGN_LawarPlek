@@ -1,3 +1,4 @@
+import LoadBar from "../../components/common/LoadBar"
 
 const EstTime = ({ title, time }: {title: string, time: string}) => {
     return (
@@ -29,6 +30,7 @@ export default function EstimateTime() {
                     </div>
                 ))}
             </div>
+            <LoadBar />
         </div>
     )
 }
