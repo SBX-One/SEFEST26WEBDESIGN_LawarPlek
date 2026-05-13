@@ -87,3 +87,15 @@ export type MenuProps = {
     setTotalHarga?: Dispatch<SetStateAction<number>>
     back: string;
 }
+
+export type SimpleIconProps = {
+    icon: string;
+    iconWidth: number;
+}
+
+export type BarProps = {
+    title: string;
+    desc: string;
+    iconR?: string;
+    iconL?: string;
+}
