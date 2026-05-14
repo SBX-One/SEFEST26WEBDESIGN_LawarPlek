@@ -1,4 +1,4 @@
-import { Navigate, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { useTrash } from "../../context/TrashContext";
 import { getProductionImageMap } from "../../type/useProductImage";
@@ -18,27 +18,93 @@ export default function ItemDetail() {
     const [isButtonClick, setIsButtonClick] = useState<boolean>(false);
     const navigate = useNavigate();
 
-    const productImage = selectedProduct ? imageMap[selectedProduct.img] ?? '/placeholder.webp' : '/placeholder.webp';
-    console.log(itemNum)
+    const productImage = selectedProduct
+        ? imageMap[selectedProduct.img] ?? '/placeholder.webp'
+        : '/placeholder.webp';
 
     useEffect(() => {
         if (selectedProduct?.variant && selectedProduct.variant.length > 0) {
             setSelectedVariant(selectedProduct.variant[0]);
         }
-    }, [selectedProduct])
+    }, [selectedProduct]);
 
     function handleAdd() {
-        setIsButtonClick(true);
-        setItemNum(prev => prev +1);
-    }
+    const newNum = itemNum + 1;
+    setItemNum((prev: number) => prev + 1);
 
-    function handleSubtract() {
-        setItemNum(prev => prev -1);
-        if (itemNum == 1) {
-            setIsButtonClick(false);
-        }
+    if (!isButtonClick) {
+        setIsButtonClick(true);
+        addToCart(newNum);      // pertama kali → POST
+    } else {
+        updateCart(newNum);     // sudah ada → PUT/PATCH
     }
-    
+}
+
+function handleSubtract() {
+    const newNum = itemNum - 1;
+    setItemNum((prev: number) => prev - 1);
+
+    if (newNum === 0) {
+        setIsButtonClick(false);
+        deleteCart();           // hapus dari keranjang
+    } else {
+        updateCart(newNum);     // update jumlah
+    }
+}
+
+// Pertama kali tambah → POST
+async function addToCart(jumlah: number) {
+    if (!selectedProduct) return;
+    try {
+        const response = await fetch("http://localhost:3001/api/keranjang", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+                "id": selectedProduct.id,
+                "namaBarang": selectedProduct.title,
+                "variant": selectedVariant,
+                "harga": selectedProduct.harga,
+                "jumlah": jumlah   // ✅ pakai argumen, bukan state
+            })
+        });
+        if (!response.ok) throw new Error("Gagal menambah");
+        const data = await response.json();
+        console.log("Berhasil ditambah:", data);
+    } catch (error) {
+        console.error("Error:", error);
+    }
+}
+
+// Update jumlah → PATCH
+async function updateCart(jumlah: number) {
+    if (!selectedProduct) return;
+    try {
+        const response = await fetch(`http://localhost:3001/api/keranjang/${selectedProduct.id}`, {
+            method: "PATCH",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ "jumlah": jumlah })  // ✅ kirim jumlah terbaru
+        });
+        if (!response.ok) throw new Error("Gagal update");
+        const data = await response.json();
+        console.log("Berhasil diupdate:", data);
+    } catch (error) {
+        console.error("Error:", error);
+    }
+}
+
+// Jumlah 0 → hapus dari keranjang
+async function deleteCart() {
+    if (!selectedProduct) return;
+    try {
+        await fetch(`http://localhost:3001/api/keranjang/${selectedProduct.id}`, {
+            method: "DELETE"
+        });
+        console.log("Item dihapus dari keranjang");
+    } catch (error) {
+        console.error("Error:", error);
+    }
+}
+
     return (
         <div className="flex flex-col">
             <div className="p-5 flex flex-col flex-1">
@@ -50,18 +116,29 @@ export default function ItemDetail() {
                     <div className="flex flex-row gap-3 overflow-auto -mx-5 pl-5 mb-5">
                         {selectedProduct?.variant.map((item, i) => (
                             <div key={i}>
-                                <SimplePill text={item} isSelected={selectedVariant === item} onClick={() => setItemVariant(item)} />
+                                <SimplePill
+                                    text={item}
+                                    isSelected={selectedVariant === item}
+                                    onClick={() => {
+                                        setSelectedVariant(item); // ✅ update local state
+                                        setItemVariant(item);
+                                    }}
+                                />
                             </div>
                         ))}
                     </div>
+
                     <div className="border-2 border-border-default p-5 rounded-2xl flex flex-col flex-1">
                         <div className="mb-3 flex flex-col gap-3">
-                            <h1 className="text-text-heading lg-semibold">{selectedProduct?.title || productName?.replace(/\+/g, ' ')}</h1>
+                            <h1 className="text-text-heading lg-semibold">
+                                {selectedProduct?.title || productName?.replace(/\+/g, ' ')}
+                            </h1>
                             <p className="text-text-heading md-semibold">
                                 Rp. {selectedProduct?.harga.toLocaleString('id-ID') || '0'}
                             </p>
                         </div>
                         <p className="text-text-body mb-auto xs-default">{selectedProduct?.desc}</p>
+
                         <div className="flex flex-row gap-3 w-full mt-18">
                             <div className="w-fit" onClick={() => navigate('/Keranjang')}>
                                 <SimpleIcon icon={cart} iconWidth={16} />
@@ -77,8 +154,13 @@ export default function ItemDetail() {
                                             <SimpleIcon icon={minus} iconWidth={16} />
                                         </button>
                                     </div>
-                                ): (
-                                <RigoButton text="Tambah Keranjang" inv={true} icon={false} onClick={handleAdd} />
+                                ) : (
+                                    <RigoButton
+                                        text="Tambah Keranjang"
+                                        inv={true}
+                                        icon={false}
+                                        onClick={handleAdd}
+                                    />
                                 )}
                             </div>
                         </div>
@@ -86,5 +168,5 @@ export default function ItemDetail() {
                 </div>
             </div>
         </div>
-    )
+    );
 }

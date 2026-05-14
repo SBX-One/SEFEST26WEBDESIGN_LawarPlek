@@ -1,0 +1,16 @@
+[
+    {
+        "id": 1,
+        "namaBarang": "Le Minerale",
+        "variant": "10L",
+        "harga": 15000,
+        "jumlah": 6
+    },
+    {
+        "id": 2,
+        "namaBarang": "Le Minerale",
+        "variant": "10L",
+        "harga": 15000,
+        "jumlah": 5
+    }
+]

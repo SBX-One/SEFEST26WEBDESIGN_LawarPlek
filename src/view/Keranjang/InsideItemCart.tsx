@@ -12,8 +12,9 @@ export default function InsideItemCart() {
         <div className="px-5 mt-5">
             <Bar iconL={house} iconR={map} title="Jl. Pulau Ambon No.8" desc="Denpasae Barat, Bali" />
 
-            <div>
+            <div className="mt-10">
                 <h1 className="sm-semibold text-text-label">Sampah Umum</h1>
+                
             </div>
         </div>
     )
