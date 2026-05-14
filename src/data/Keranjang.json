@@ -12,5 +12,12 @@
         "variant": "10L",
         "harga": 15000,
         "jumlah": 3
+    },
+    {
+        "id": 1,
+        "namaBarang": "Le Minerale",
+        "variant": "5L",
+        "harga": 15000,
+        "jumlah": 2
     }
 ]

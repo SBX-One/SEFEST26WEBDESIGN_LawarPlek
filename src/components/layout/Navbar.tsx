@@ -20,7 +20,7 @@ export default function Navbar({ mode }: NavbarProps) {
             <div className={`bg-neutral-white left-0 w-screen ml-[calc(50%-50vw)] py-10 desktop:py-7.5 md:py-14 px-5 md:px-15 xl:px-30 flex justify-between border-b-2 border-[#DEDEDE] items-center ${mode === 'home' ? 'max-h-21' : ''}`}>
                 <img src={mode === 'home' ? mainLogo : Logo} alt="Company Logo" className={`${mode === 'home' ? 'w-6' : ''}`} onClick={() => navigate('/Home')} />
                 <div className="flex flex-row items-center">
-                    <img src={cart} alt="Cart" className={`w-4 h-4 m-3.5 relative right-3 ${mode === 'home' ? 'block' : 'hidden'}`} />
+                    <img onClick={() => navigate('/Keranjang')} src={cart} alt="Cart" className={`w-4 h-4 m-3.5 relative right-3 ${mode === 'home' ? 'block' : 'hidden'}`} />
                     <img src={isMenuOpen ? chevron : Burger} onClick={() => setIsMenuOpen(!isMenuOpen)} alt="menu" className={`p-4.5 ${mode === 'home' ? 'rounded-2xl' : 'rounded-full'} border-border-default border desktop:hidden ${isMenuOpen ? 'rotate-90' : ''}`} />
                     <div className="desktop:flex hidden gap-4">
                         {ListData.map((link, index) => (
