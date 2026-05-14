@@ -1,7 +1,7 @@
 import Data from "../../data/dummyData.json"
 
 export default function BalanceViewer() {
-    const balance = Data[0].user[0].balanceNominal;
+    const balance = Data[0].saldo;
 
     console.log(balance)
     return (

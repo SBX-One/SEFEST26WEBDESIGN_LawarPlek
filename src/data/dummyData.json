@@ -1,9 +1,7 @@
 [
     {
-        "user" : [
-            {
-                "balanceNominal" : 1000000
-            }
-        ]
+        "id": 1,
+        "nama": "wikan",
+        "saldo": 100000
     }
 ]

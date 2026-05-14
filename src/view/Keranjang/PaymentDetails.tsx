@@ -5,6 +5,7 @@ import Data from "../../data/Keranjang.json";
 import HitungTotalHarga from "../../type/HitungTotalHarga";
 import RigoButton from "../../components/ui/button/RigoButton";
 import { useNavigate } from "react-router-dom";
+import { useTrash } from "../../context/TrashContext";
 
 export default function PaymentDetails() {
     const totalHarga = HitungTotalHarga(Data);
@@ -12,7 +13,13 @@ export default function PaymentDetails() {
     const priceFormat = grandTotal.toLocaleString('id-ID');
     const subTotal = Data.map(item => item.harga * item.jumlah);
     const navigate = useNavigate();
+    const { setIsOrder } = useTrash();
 
+    function handleCheckOut() {
+        navigate('/Home');
+        setIsOrder(true);
+    }
+    
     return (
         <div className="p-5 border-2 border-border-default rounded-t-xl mt-10">
             <Bar title="Rp100.000 - Rp42.000" desc={"GREGO Wallet"} iconL={mainLogo} iconR={ellipse} iconRBorder={false} />
@@ -35,7 +42,7 @@ export default function PaymentDetails() {
                 </div>
             </div>
             
-            <RigoButton text="Checkout" inv={true} onClick={() => navigate('/Home')} />
+            <RigoButton text="Checkout" inv={true} onClick={handleCheckOut} />
         </div>
     )
 }

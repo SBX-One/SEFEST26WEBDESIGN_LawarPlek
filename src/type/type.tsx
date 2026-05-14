@@ -85,7 +85,7 @@ export type TabsProps = {
 }
 
 export type MenuProps = {
-    TotalHarga?: number;
+    TotalHarga?: number | string;
     setTotalHarga?: Dispatch<SetStateAction<number>>
     back: string;
 }
