@@ -6,7 +6,7 @@ import { useTrash } from "../../context/TrashContext";
 import { useHandleSetNum } from "../../type/handleSetNumt";
 
 export default function SampahUmum() {
-    const { setTotalHarga, numSampah } = useTrash();
+    const { setTotalHarga, numSampah, setSelectedTrash } = useTrash();
     const handleSetNum = useHandleSetNum();
     
     const SampahUmumList = [
@@ -44,6 +44,19 @@ export default function SampahUmum() {
     useEffect(() => {
         setTotalHarga(totalHarga);
     }, [totalHarga, setTotalHarga]);
+
+    // Update selectedTrash ketika numSampah berubah
+    useEffect(() => {
+        const selected = numSampah
+            .map((quantity, idx) => ({
+                name: SampahUmumList[idx].title,
+                quantity,
+                harga: SampahUmumList[idx].harga,
+            }))
+            .filter(item => item.quantity > 0); // Hanya ambil yang quantity > 0
+        
+        setSelectedTrash(selected);
+    }, [numSampah, setSelectedTrash]);
     
     return (
         <div>

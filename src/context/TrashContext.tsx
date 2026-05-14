@@ -1,6 +1,12 @@
 import { createContext, useState, useContext } from "react";
 // Perbaikan 1: Gunakan import type
-import type { ReactNode } from "react"; 
+import type { ReactNode } from "react";
+
+export interface SelectedTrashItem {
+    name: string;
+    quantity: number; // dalam kg
+    harga: number;
+}
 
 interface TrashContextType {
     totalHarga: number;
@@ -9,6 +15,8 @@ interface TrashContextType {
     setCompletedHarga: (harga: number) => void;
     numSampah: number[];
     setNumSampah: (sampah: number[]) => void;
+    selectedTrash: SelectedTrashItem[];
+    setSelectedTrash: (trash: SelectedTrashItem[]) => void;
     title: string;
     setTitle: (title: string) => void;
     isOrder: boolean;
@@ -21,11 +29,12 @@ export function TrashProvider({ children }: { children: ReactNode }) {
     const [totalHarga, setTotalHarga] = useState<number>(0);
     const [completedHarga, setCompletedHarga] = useState<number>(0);
     const [numSampah, setNumSampah] = useState<number[]>([0, 0, 0, 0]);
+    const [selectedTrash, setSelectedTrash] = useState<SelectedTrashItem[]>([]);
     const [isOrder, setIsOrder] = useState<boolean>(false);
     const [title, setTitle] = useState<string>("");
 
     return (
-        <TrashContext.Provider value={{ totalHarga, setTotalHarga, completedHarga, setCompletedHarga, numSampah, setNumSampah, title, setTitle, isOrder, setIsOrder }}>
+        <TrashContext.Provider value={{ totalHarga, setTotalHarga, completedHarga, setCompletedHarga, numSampah, setNumSampah, selectedTrash, setSelectedTrash, title, setTitle, isOrder, setIsOrder }}>
             {children}
         </TrashContext.Provider>
     );

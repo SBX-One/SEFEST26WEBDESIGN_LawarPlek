@@ -105,3 +105,8 @@ export type DropDownBarProps = {
     icon: string;
     onclick?: () => void;
 }
+
+export type SimpleTinyPill = {
+    text: string;
+    icon?: React.ReactNode;
+}
