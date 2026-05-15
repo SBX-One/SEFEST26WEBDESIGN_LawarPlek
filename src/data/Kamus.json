@@ -2,6 +2,7 @@
     {
         "title": "Plastic",
         "para": "Rp. 1000/kg",
+        "desc": "Barang :  Botol plastik, kantong kresek, dll",
         "product": [
             {
                 "id": 1,
@@ -9,17 +10,26 @@
             },
             {
                 "id": 2,
-                "img": "../../webp/Product/imageP1.webp"
+                "img": "../../webp/Product/imageP2.webp"
             },
             {
                 "id": 3,
-                "img": "../../webp/Product/imageP1.webp"
+                "img": "../../webp/Product/imageP3.webp"
+            },
+            {
+                "id": 4,
+                "img": "../../webp/Product/imageP3.webp"
+            },
+            {
+                "id": 5,
+                "img": "../../webp/Product/imageP3.webp"
             }
         ]
     },
     {
         "title": "Kertas",
         "para": "Rp. 1000/kg",
+        "desc": "Barang :  Botol plastik, kantong kresek, dll",
         "product": [
             {
                 "id": 1,
@@ -27,17 +37,26 @@
             },
             {
                 "id": 2,
-                "img": "../../webp/Product/imageP1.webp"
+                "img": "../../webp/Product/imageP2.webp"
             },
             {
                 "id": 3,
-                "img": "../../webp/Product/imageP1.webp"
+                "img": "../../webp/Product/imageP3.webp"
+            },
+            {
+                "id": 4,
+                "img": "../../webp/Product/imageP3.webp"
+            },
+            {
+                "id": 5,
+                "img": "../../webp/Product/imageP3.webp"
             }
         ]
     },
     {
         "title": "Minyak Jelantah",
         "para": "Rp. 1000/kg",
+        "desc": "Barang :  Botol plastik, kantong kresek, dll",
         "product": [
             {
                 "id": 1,
@@ -45,35 +64,53 @@
             },
             {
                 "id": 2,
-                "img": "../../webp/Product/imageP1.webp"
+                "img": "../../webp/Product/imageP2.webp"
             },
             {
                 "id": 3,
-                "img": "../../webp/Product/imageP1.webp"
+                "img": "../../webp/Product/imageP3.webp"
+            },
+            {
+                "id": 4,
+                "img": "../../webp/Product/imageP3.webp"
+            },
+            {
+                "id": 5,
+                "img": "../../webp/Product/imageP3.webp"
             }
         ]
     },
     {
         "title": "Kaleng Aluminium",
         "para": "Rp. 1000/kg",
+        "desc": "Barang :  Botol plastik, kantong kresek, dll",
         "product": [
             {
                 "id": 1,
-                "img": "../../webp/Product/imageP1.webp"
+                "img": "./webp/Product/imageP1.webp"
             },
             {
                 "id": 2,
-                "img": "../../webp/Product/imageP1.webp"
+                "img": "../../webp/Product/imageP2.webp"
             },
             {
                 "id": 3,
-                "img": "../../webp/Product/imageP1.webp"
+                "img": "../../webp/Product/imageP3.webp"
+            },
+            {
+                "id": 4,
+                "img": "../../webp/Product/imageP3.webp"
+            },
+            {
+                "id": 5,
+                "img": "../../webp/Product/imageP3.webp"
             }
         ]
     },
     {
         "title": "Kardus",
         "para": "Rp. 1000/kg",
+        "desc": "Barang :  Botol plastik, kantong kresek, dll",
         "product": [
             {
                 "id": 1,
@@ -81,17 +118,26 @@
             },
             {
                 "id": 2,
-                "img": "../../webp/Product/imageP1.webp"
+                "img": "../../webp/Product/imageP2.webp"
             },
             {
                 "id": 3,
-                "img": "../../webp/Product/imageP1.webp"
+                "img": "../../webp/Product/imageP3.webp"
+            },
+            {
+                "id": 4,
+                "img": "../../webp/Product/imageP3.webp"
+            },
+            {
+                "id": 5,
+                "img": "../../webp/Product/imageP3.webp"
             }
         ]
     },
     {
         "title": "Plastic PET",
         "para": "Rp. 1000/kg",
+        "desc": "Barang :  Botol plastik, kantong kresek, dll",
         "product": [
             {
                 "id": 1,
@@ -99,11 +145,19 @@
             },
             {
                 "id": 2,
-                "img": "../../webp/Product/imageP1.webp"
+                "img": "../../webp/Product/imageP2.webp"
             },
             {
                 "id": 3,
-                "img": "../../webp/Product/imageP1.webp"
+                "img": "../../webp/Product/imageP3.webp"
+            },
+            {
+                "id": 4,
+                "img": "../../webp/Product/imageP3.webp"
+            },
+            {
+                "id": 5,
+                "img": "../../webp/Product/imageP3.webp"
             }
         ]
     }
