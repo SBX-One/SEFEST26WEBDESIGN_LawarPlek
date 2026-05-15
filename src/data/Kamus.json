@@ -1,0 +1,110 @@
+[
+    {
+        "title": "Plastic",
+        "para": "Rp. 1000/kg",
+        "product": [
+            {
+                "id": 1,
+                "img": "../../webp/Product/imageP1.webp"
+            },
+            {
+                "id": 2,
+                "img": "../../webp/Product/imageP1.webp"
+            },
+            {
+                "id": 3,
+                "img": "../../webp/Product/imageP1.webp"
+            }
+        ]
+    },
+    {
+        "title": "Kertas",
+        "para": "Rp. 1000/kg",
+        "product": [
+            {
+                "id": 1,
+                "img": "../../webp/Product/imageP1.webp"
+            },
+            {
+                "id": 2,
+                "img": "../../webp/Product/imageP1.webp"
+            },
+            {
+                "id": 3,
+                "img": "../../webp/Product/imageP1.webp"
+            }
+        ]
+    },
+    {
+        "title": "Minyak Jelantah",
+        "para": "Rp. 1000/kg",
+        "product": [
+            {
+                "id": 1,
+                "img": "../../webp/Product/imageP1.webp"
+            },
+            {
+                "id": 2,
+                "img": "../../webp/Product/imageP1.webp"
+            },
+            {
+                "id": 3,
+                "img": "../../webp/Product/imageP1.webp"
+            }
+        ]
+    },
+    {
+        "title": "Kaleng Aluminium",
+        "para": "Rp. 1000/kg",
+        "product": [
+            {
+                "id": 1,
+                "img": "../../webp/Product/imageP1.webp"
+            },
+            {
+                "id": 2,
+                "img": "../../webp/Product/imageP1.webp"
+            },
+            {
+                "id": 3,
+                "img": "../../webp/Product/imageP1.webp"
+            }
+        ]
+    },
+    {
+        "title": "Kardus",
+        "para": "Rp. 1000/kg",
+        "product": [
+            {
+                "id": 1,
+                "img": "../../webp/Product/imageP1.webp"
+            },
+            {
+                "id": 2,
+                "img": "../../webp/Product/imageP1.webp"
+            },
+            {
+                "id": 3,
+                "img": "../../webp/Product/imageP1.webp"
+            }
+        ]
+    },
+    {
+        "title": "Plastic PET",
+        "para": "Rp. 1000/kg",
+        "product": [
+            {
+                "id": 1,
+                "img": "../../webp/Product/imageP1.webp"
+            },
+            {
+                "id": 2,
+                "img": "../../webp/Product/imageP1.webp"
+            },
+            {
+                "id": 3,
+                "img": "../../webp/Product/imageP1.webp"
+            }
+        ]
+    }
+]
