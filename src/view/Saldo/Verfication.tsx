@@ -6,12 +6,14 @@ import { useState } from "react";
 import Bar from "../../components/common/Bar";
 import userData from "../../data/dummyData.json";
 import ellipse from "../../assets/svg/ellipsis.svg"
+import { useNavigate } from "react-router-dom";
+import bcrypt from "bcryptjs";
 
 export default function AddSaldo() {
-    const { selectedMethod } = useTrash();
+    const { selectedMethod, userInput, setUserInput } = useTrash();
     const [clickVerfikasi, setClickVerfikasi] = useState<boolean>(false);
-    const [userInput, setUserInput] = useState<string>('');
     const userName = userData.map(item => item.nama);
+    const navigate = useNavigate();
 
     function handleVerfication() {
         if (!userInput) {
@@ -19,6 +21,13 @@ export default function AddSaldo() {
         } else {
             setClickVerfikasi(true);
         }
+    }
+
+    const handleChoseAccount = async () => {
+        const saltRound = 10;
+        const hash = await bcrypt.hash(userInput, saltRound);
+
+        navigate(`/Saldo/${selectedMethod}/${hash}`)
     }
 
     return (
@@ -34,12 +43,12 @@ export default function AddSaldo() {
             </div>
             <div className="mt-10">
                 {clickVerfikasi ? (
-                    <div className="relative">
+                    <div className="relative" onClick={handleChoseAccount}>
                         <img src={selectedMethod} className="absolute left-5 top-5" />
                         <Bar title={userName[0]} desc={userInput} iconL={selectedMethod} iconLBorder={false} iconR={ellipse} iconRBorder={false} />
                     </div>
                 ): (
-                    <div className="mx-5 py-13.25 mt-10 flex flex-col border-2 border-border-default rounded-2xl">
+                    <div className="py-13.25 mt-10 flex flex-col border-2 border-border-default rounded-2xl">
                         <img src={creditCard} alt="credit card" className="h-12" />
                         <h1 className="text-center label-default text-text-placeholder">Text Placeholder</h1>
                     </div>

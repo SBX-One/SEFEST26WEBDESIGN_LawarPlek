@@ -8,7 +8,7 @@ import Receipt from "./pages/Receipt";
 import ItemCheckout from "./pages/ItemCheckout";
 import Keranjang from "./pages/Keranjang";
 import Saldo from "./pages/Saldo";
-import AddSaldo from "./view/Saldo/AddSaldo";
+import AddSaldo from "./view/Saldo/Verfication";
 
 function App() {
   return (

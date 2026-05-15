@@ -6,7 +6,7 @@ export type RIGOBTNPROPS = {
     chevronColor?: string,
     icon?: boolean
     onClick?: () => void;
-    disabled: boolean;
+    disabled?: boolean;
 }  
 
 export type WWSCardProps = {
