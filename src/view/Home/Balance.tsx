@@ -14,12 +14,12 @@ export default function Balance() {
         {
             text : "Transfer",
             icon : arrowUpDown,
-            onClick : () => navigate("/ScanYourTrash")
+            onClick : () => navigate("/Saldo")
         },
         {
             text : "Shop",
             icon : shoppingCart,
-            onClick : () => console.log("Transfer clicked")
+            onClick : () => navigate('/ScanYourTrash')
         },
     ]
 

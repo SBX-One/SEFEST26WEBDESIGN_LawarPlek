@@ -11,6 +11,7 @@ app.use(cors());
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const KERANJANG_PATH = path.join(__dirname, '../Keranjang.json');
+const DUMMY_DATA_PATH = path.join(__dirname, '../dummyData.json');
 
 // Fungsi baca Keranjang.json
 function readKeranjang() {
@@ -27,16 +28,31 @@ function writeKeranjang(data) {
     fs.writeFileSync(KERANJANG_PATH, JSON.stringify(data, null, 4));
 }
 
+// Fungsi baca dummyData.json
+function readDummyData() {
+    try {
+        const data = fs.readFileSync(DUMMY_DATA_PATH, 'utf8');
+        return JSON.parse(data);
+    } catch (error) {
+        return [];
+    }
+}
+
+// Fungsi simpan ke dummyData.json
+function writeDummyData(data) {
+    fs.writeFileSync(DUMMY_DATA_PATH, JSON.stringify(data, null, 4));
+}
+
 // GET: Ambil semua item keranjang
 app.get('/api/keranjang', (req, res) => {
-    const keranjang = readKeranjang(); // ✅ pakai KERANJANG_PATH via readKeranjang()
+    const keranjang = readKeranjang();
     res.json(keranjang);
 });
 
 // POST: Tambah atau update item
 app.post('/api/keranjang', (req, res) => {
     const { id, namaBarang, variant, harga, jumlah } = req.body;
-    const keranjang = readKeranjang(); // ✅ pakai KERANJANG_PATH via readKeranjang()
+    const keranjang = readKeranjang();
 
     const existingIndex = keranjang.findIndex(item => item.id === id);
 
@@ -46,7 +62,7 @@ app.post('/api/keranjang', (req, res) => {
         keranjang.push({ id, namaBarang, variant, harga, jumlah }); // insert baru
     }
 
-    writeKeranjang(keranjang); // ✅ pakai KERANJANG_PATH via writeKeranjang()
+    writeKeranjang(keranjang);
     res.json({ success: true, data: keranjang });
 });
 
@@ -89,6 +105,20 @@ app.delete('/api/keranjang/:id/:variant', (req, res) => {
         res.json({ success: true, message: 'Item berhasil dihapus', keranjang });
     } catch (error) {
         res.status(500).json({ error: error.message });
+    }
+});
+
+// POST: Tambah saldo ke user
+app.post('/api/addSaldo', (req, res) => {
+    const { amount } = req.body;
+    const dummyData = readDummyData();
+
+    if (dummyData.length > 0) {
+        dummyData[0].saldo += amount; // Asumsikan user pertama
+        writeDummyData(dummyData);
+        res.json({ success: true, newSaldo: dummyData[0].saldo });
+    } else {
+        res.status(404).json({ error: 'User tidak ditemukan' });
     }
 });
 
