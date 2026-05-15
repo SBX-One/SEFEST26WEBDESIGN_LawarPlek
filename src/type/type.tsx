@@ -90,6 +90,7 @@ export type MenuProps = {
     TotalHarga?: number | string;
     setTotalHarga?: Dispatch<SetStateAction<number>>
     back: string | number;
+    mode?: string
 }
 
 export type SimpleIconProps = {

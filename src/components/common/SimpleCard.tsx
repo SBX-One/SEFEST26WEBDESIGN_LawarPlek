@@ -8,12 +8,14 @@ import PlusIcon from "../ui/icons/PlusIcon"
 export default function SimpleCard({ title, desc, button = true, icon, numSampah, setNumSampah, mode }: SimpleCardProps) {
     const [isActive, setIsActive] = useState<boolean>(true)
 
-    const hadnleAdd = () => {
+    const handleAdd = () => {
+        if (!setNumSampah) return;
         setNumSampah(prev => prev + 1);
         setIsActive(false);
     }
 
     const handleSubtract = () => {
+        if (!setNumSampah) return;
         setNumSampah(prev => {
             const newValue = prev - 1;
             if (newValue <= 0) {
@@ -45,7 +47,7 @@ export default function SimpleCard({ title, desc, button = true, icon, numSampah
                 <div>
                     {button && isActive ? (
                         <div className="ml-auto mt-auto">
-                            <button onClick={hadnleAdd} className="p-2.5 border-2 border-border-default rounded-2xl ">
+                            <button onClick={handleAdd} className="p-2.5 border-2 border-border-default rounded-2xl ">
                                 {icon ? (
                                     icon
                                 ) : (
@@ -55,7 +57,7 @@ export default function SimpleCard({ title, desc, button = true, icon, numSampah
                         </div>
                     ) : (
                         <div className="flex justify-between flex-row-reverse items-center mt-auto">
-                            <button onClick={hadnleAdd} className="p-2.5 border-2 border-border-default rounded-2xl ">
+                            <button onClick={handleAdd} className="p-2.5 border-2 border-border-default rounded-2xl ">
                                 <img src={plus} alt="plus" />
                             </button>
                             <p className="label-default text-text-body">{numSampah}</p>

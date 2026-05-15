@@ -10,6 +10,7 @@ import Keranjang from "./pages/Keranjang";
 import Saldo from "./pages/Saldo";
 import VerificationCard from "./view/Saldo/Verfication";
 import AddSaldo from "./view/Saldo/AddSaldo";
+import AddSampahMain from "./view/CleanYourTrash/AddTrashMain";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/" element={<HomePages />} />
           <Route path="/Home" element={<Home />} />
           <Route path="/ScanYourTrash" element={<CleanYourTrash />} />
+          <Route path="/ScanYourTrash/AddTrash" element={<AddSampahMain />} />
           <Route path="/TrashCheckout" element={<TrashCheckout />} />
           <Route path="/Receipt" element={<Receipt />} />
           <Route path="/ItemCheckout" element={<ItemCheckout />} />
