@@ -72,7 +72,7 @@ export type SimplePillProps = {
 }
 
 export type SimpleCardProps = {
-    mode: string;
+    mode?: string;
     title?: string;
     desc?: string;
     button?: boolean;

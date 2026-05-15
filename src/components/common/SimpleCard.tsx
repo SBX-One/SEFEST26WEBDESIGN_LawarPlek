@@ -5,25 +5,49 @@ import { useState } from "react"
 import check from "../../assets/svg/stats-up.svg"
 import PlusIcon from "../ui/icons/PlusIcon"
 
-export default function SimpleCard({ title, desc, button = true, icon, numSampah, setNumSampah, mode }: SimpleCardProps) {
+export default function SimpleCard({ title, desc, button = true, icon, numSampah = 0, setNumSampah, mode }: SimpleCardProps) {
     const [isActive, setIsActive] = useState<boolean>(true)
+    const [localNumSampah, setLocalNumSampah] = useState<number>(0)
 
     const handleAdd = () => {
-        if (!setNumSampah) return;
-        setNumSampah(prev => prev + 1);
-        setIsActive(false);
+        if (setNumSampah) {
+            // Gunakan setNumSampah dari props jika ada
+            setNumSampah(prev => prev + 1);
+            if (isActive) {
+                setIsActive(false);
+            }
+        } else {
+            // Gunakan state lokal jika tidak ada setNumSampah
+            setLocalNumSampah(prev => prev + 1);
+            if (isActive) {
+                setIsActive(false);
+            }
+        }
+        console.log("click")
     }
 
     const handleSubtract = () => {
-        if (!setNumSampah) return;
-        setNumSampah(prev => {
-            const newValue = prev - 1;
-            if (newValue <= 0) {
-                setIsActive(true);
-                return 0;
-            }
-            return newValue;
-        })
+        if (setNumSampah) {
+            // Gunakan setNumSampah dari props jika ada
+            setNumSampah(prev => {
+                const newValue = prev - 1;
+                if (newValue <= 0) {
+                    setIsActive(true);
+                    return 0;
+                }
+                return newValue;
+            })
+        } else {
+            // Gunakan state lokal jika tidak ada setNumSampah
+            setLocalNumSampah(prev => {
+                const newValue = prev - 1;
+                if (newValue <= 0) {
+                    setIsActive(true);
+                    return 0;
+                }
+                return newValue;
+            })
+        }
     }
 
 
@@ -36,13 +60,23 @@ export default function SimpleCard({ title, desc, button = true, icon, numSampah
                     <p className="xs-default text-text-placeholder">{desc}</p>
                 </div>
             </div>
-            {mode === "add" ? (
-                <div className="flex flex-col gap-3 items-center">
+            {mode === "add" && isActive ? (
+                <button onClick={handleAdd} className="flex flex-col gap-3 items-center w-full h-full justify-center">
                     <div className="p-2.5 border-2 border-border-default rounded-full w-fit">
                         <PlusIcon className="text-icon-default w-4 h-4" />
                     </div>
                     <h1 className="text-text-placeholder sm-default">Tambah Baru</h1>
-                </div>    
+                </button>    
+            ) : mode === "add" && !isActive ? (
+                <div className="flex justify-between flex-row-reverse items-center mt-auto w-full">
+                    <button onClick={handleAdd} className="p-2.5 border-2 border-border-default rounded-2xl ">
+                        <img src={plus} alt="plus" />
+                    </button>
+                    <p className="label-default text-text-body">{localNumSampah}</p>
+                    <button onClick={handleSubtract} className="p-2.5 border-2 border-border-default rounded-2xl ">
+                        <img src={minus} alt="minus" />
+                    </button>
+                </div>
             ) : (
                 <div>
                     {button && isActive ? (
@@ -56,7 +90,7 @@ export default function SimpleCard({ title, desc, button = true, icon, numSampah
                             </button>
                         </div>
                     ) : (
-                        <div className="flex justify-between flex-row-reverse items-center mt-auto">
+                        <div className=" flex justify-between flex-row-reverse items-center mt-auto">
                             <button onClick={handleAdd} className="p-2.5 border-2 border-border-default rounded-2xl ">
                                 <img src={plus} alt="plus" />
                             </button>

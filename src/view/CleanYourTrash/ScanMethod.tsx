@@ -1,32 +1,9 @@
-import { useEffect, useState } from "react"
+import { useState } from "react"
 import Tabs from "../../components/ui/button/Tabs";
 import barcodeIcon from "../../assets/svg/fi_Barcode.svg"
-import RigoButton from "../../components/ui/button/RigoButton";
-import { useNavigate } from "react-router-dom";
-import { useTrash } from "../../context/TrashContext"; 
 
 export default function ScanMeth() {
-    const [currentMode, setCurrentMode ] = useState<boolean>(true);
-    const navigate = useNavigate();
-    const { totalHarga, setCompletedHarga,  } = useTrash();
-    const [disable, setDisable] = useState<boolean>();
-
-    useEffect(() => {
-        if (totalHarga != 0) {
-            setDisable(false);
-        } else {
-            setDisable(true)
-        }
-    }, [totalHarga])
-
-    const handleLanjut = () => {
-        setCompletedHarga(totalHarga);
-        if (totalHarga > 0) {
-            navigate('/ScanYourTrash');
-        } else {
-            alert("harga tidak bisa 0")
-        }
-    }
+    const [currentMode, setCurrentMode ] = useState<boolean>(false);
 
     return (
         <div className="text-text-body">
@@ -44,9 +21,6 @@ export default function ScanMeth() {
                     <input type="text" className="bg-neutral-white w-full p-4 md-semibold rounded-2xl border-2 border-border-default focus:outline-0 text-text-body mt-5" placeholder="Input kode di sini" />
                 </div>
             )}
-                <div className="w-full absolute left-0 px-5 bottom-11">
-                    <RigoButton disabled={disable} inv={true} text="Lanjut" onClick={handleLanjut} />
-                </div>
         </div>
     )
 }
