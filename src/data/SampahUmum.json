@@ -1,0 +1,65 @@
+[
+    {
+        "name" :"plastik", 
+        "Category" : [
+            {
+                "title": "plastic",
+                "desc": "Rp. 1000/kg"
+            },
+            {
+                "title": "Cardboard",
+                "desc": "Rp. 1000/kg"
+            },
+            {
+                "title": "PET Plastic",
+                "desc": "Rp. 1000/kg"
+            },
+            {
+                "title": "Other",
+                "desc": "Rp. 1000/kg"
+            }
+        ]
+    },
+    {
+        "name" :"plastik", 
+        "Category" : [
+            {
+                "title": "plastic",
+                "desc": "Rp. 1000/kg"
+            },
+            {
+                "title": "Cardboard",
+                "desc": "Rp. 1000/kg"
+            },
+            {
+                "title": "PET Plastic",
+                "desc": "Rp. 1000/kg"
+            },
+            {
+                "title": "Other",
+                "desc": "Rp. 1000/kg"
+            }
+        ]
+    },
+    {
+        "name" :"plastik", 
+        "Category" : [
+            {
+                "title": "plastic",
+                "desc": "Rp. 1000/kg"
+            },
+            {
+                "title": "Cardboard",
+                "desc": "Rp. 1000/kg"
+            },
+            {
+                "title": "PET Plastic",
+                "desc": "Rp. 1000/kg"
+            },
+            {
+                "title": "Other",
+                "desc": "Rp. 1000/kg"
+            }
+        ]
+    }
+]
