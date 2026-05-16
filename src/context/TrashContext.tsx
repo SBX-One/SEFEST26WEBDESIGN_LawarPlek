@@ -17,6 +17,30 @@ export interface SelectedProduct {
     variant: string[];
 }
 
+interface Product {
+    id: number | string,
+    img: string
+}
+
+interface Kerjasama {
+    productId: number;
+}
+
+interface KamusDetail {
+    mainDesc: string;
+    merek: string;
+    potensi: string;
+    kerjasama: Kerjasama[];
+}
+
+export interface KamusItem {
+    title: string,
+    para: string,
+    desc: string,
+    product: Product[];
+    kamusDetail: KamusDetail[];
+}
+
 interface TrashContextType {
     totalHarga: number;
     setTotalHarga: (harga: number) => void;
@@ -40,6 +64,8 @@ interface TrashContextType {
     setSelectedMethod: (selectedMethod: string) => void;
     userInput: string;
     setUserInput: (userInput: string) => void;
+    chosenKamus: KamusItem | null;
+    setChosenKamus: (chosenKamus: KamusItem) => void;
 }
 
 const TrashContext = createContext<TrashContextType | undefined>(undefined);
@@ -56,9 +82,10 @@ export function TrashProvider({ children }: { children: ReactNode }) {
     const [itemVariant, setItemVariant] = useState<string>("")
     const [selectedMethod, setSelectedMethod] = useState<string>("")
     const [userInput, setUserInput] = useState<string>("");
+    const [chosenKamus, setChosenKamus] = useState<KamusItem | null>(null);
 
     return (
-        <TrashContext.Provider value={{ userInput, setUserInput, itemNum, setItemNum, itemVariant, setItemVariant, totalHarga, setTotalHarga, completedHarga, setCompletedHarga, numSampah, setNumSampah, selectedTrash, setSelectedTrash, selectedProduct, setSelectedProduct, title, setTitle, isOrder, setIsOrder, selectedMethod, setSelectedMethod }}>
+        <TrashContext.Provider value={{ chosenKamus, setChosenKamus, userInput, setUserInput, itemNum, setItemNum, itemVariant, setItemVariant, totalHarga, setTotalHarga, completedHarga, setCompletedHarga, numSampah, setNumSampah, selectedTrash, setSelectedTrash, selectedProduct, setSelectedProduct, title, setTitle, isOrder, setIsOrder, selectedMethod, setSelectedMethod }}>
             {children}
         </TrashContext.Provider>
     );

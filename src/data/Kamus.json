@@ -1,6 +1,6 @@
-[
+﻿[
     {
-        "title": "Plastic",
+        "title": "plastik",
         "para": "Rp. 1000/kg",
         "desc": "Barang :  Botol plastik, kantong kresek, dll",
         "product": [
@@ -24,10 +24,22 @@
                 "id": 5,
                 "img": "../../webp/Product/imageP3.webp"
             }
+        ],
+        "kamusDetail": [
+            {
+                "mainDesc": "Botol air plastik PET (Polyethylene Terephthalate) adalah wadah bening, dan kuat yang ditandai dengan kode daur ulang angka 1.",
+                "merek": "Aqua, Le Minerale, Coca-Cola, Sprite, Pocari Sweat, Teh Pucuk Harum, Ades, Frestea, Cleo, Vit, dll.",
+                "potensi": "Plastik food grade, serat sintetis, kerajinan tangan, hingga filamen printer 3D.",
+                "kerjasama": [
+                    { "productId": 1 },
+                    { "productId": 2 },
+                    { "productId": 3 }
+                ]
+            }
         ]
     },
     {
-        "title": "Kertas",
+        "title": "kertas",
         "para": "Rp. 1000/kg",
         "desc": "Barang :  Botol plastik, kantong kresek, dll",
         "product": [
@@ -50,13 +62,25 @@
             {
                 "id": 5,
                 "img": "../../webp/Product/imageP3.webp"
+            }
+        ],
+        "kamusDetail": [
+            {
+                "mainDesc": "Kertas adalah material yang dibuat dari serat cellulose.",
+                "merek": "Hvs, Art Paper, Kraft Paper, Cardboard, dll.",
+                "potensi": "Kertas daur ulang, bahan kemasan, produk kerajinan, hingga pulp berkualitas tinggi.",
+                "kerjasama": [
+                    { "productId": 4 },
+                    { "productId": 5 },
+                    { "productId": 6 }
+                ]
             }
         ]
     },
     {
         "title": "Minyak Jelantah",
         "para": "Rp. 1000/kg",
-        "desc": "Barang :  Botol plastik, kantong kresek, dll",
+        "desc": "Barang :  Minyak goreng bekas yang sudah tidak digunakan",
         "product": [
             {
                 "id": 1,
@@ -77,17 +101,29 @@
             {
                 "id": 5,
                 "img": "../../webp/Product/imageP3.webp"
+            }
+        ],
+        "kamusDetail": [
+            {
+                "mainDesc": "Minyak jelantah adalah minyak goreng bekas yang telah digunakan untuk memasak dan dapat didaur ulang.",
+                "merek": "Semua merk minyak goreng bekas dari rumah tangga maupun restoran.",
+                "potensi": "Biodiesel, sabun, kosmetik, hingga pakan ternak berkualitas.",
+                "kerjasama": [
+                    { "productId": 7 },
+                    { "productId": 8 },
+                    { "productId": 9 }
+                ]
             }
         ]
     },
     {
         "title": "Kaleng Aluminium",
         "para": "Rp. 1000/kg",
-        "desc": "Barang :  Botol plastik, kantong kresek, dll",
+        "desc": "Barang :  Kaleng bekas minuman dan kemasan aluminium",
         "product": [
             {
                 "id": 1,
-                "img": "./webp/Product/imageP1.webp"
+                "img": "../../webp/Product/imageP1.webp"
             },
             {
                 "id": 2,
@@ -104,13 +140,25 @@
             {
                 "id": 5,
                 "img": "../../webp/Product/imageP3.webp"
+            }
+        ],
+        "kamusDetail": [
+            {
+                "mainDesc": "Kaleng aluminium adalah kemasan ringan yang dapat 100% didaur ulang tanpa kehilangan kualitasnya.",
+                "merek": "Coca-Cola, Pepsi, Fanta, RedBull, Beer, dan berbagai merek minuman lainnya.",
+                "potensi": "Aluminium baru, otomotif, konstruksi, elektronik, hingga aerospace.",
+                "kerjasama": [
+                    { "productId": 10 },
+                    { "productId": 11 },
+                    { "productId": 12 }
+                ]
             }
         ]
     },
     {
         "title": "Kardus",
         "para": "Rp. 1000/kg",
-        "desc": "Barang :  Botol plastik, kantong kresek, dll",
+        "desc": "Barang :  Kardus dan corrugated paper bekas",
         "product": [
             {
                 "id": 1,
@@ -132,12 +180,24 @@
                 "id": 5,
                 "img": "../../webp/Product/imageP3.webp"
             }
+        ],
+        "kamusDetail": [
+            {
+                "mainDesc": "Kardus adalah kemasan kertas berlapis yang kuat dan fleksibel untuk pengiriman dan penyimpanan.",
+                "merek": "Kemasan dari online shop, supermarket, dan berbagai industri retail.",
+                "potensi": "Kertas daur ulang, bahan kemasan baru, pulp berkualitas, hingga produk kertas lainnya.",
+                "kerjasama": [
+                    { "productId": 1 },
+                    { "productId": 2 },
+                    { "productId": 3 }
+                ]
+            }
         ]
     },
     {
-        "title": "Plastic PET",
+        "title": "Plastik PET",
         "para": "Rp. 1000/kg",
-        "desc": "Barang :  Botol plastik, kantong kresek, dll",
+        "desc": "Barang :  Botol plastik PET dan kemasan transparan",
         "product": [
             {
                 "id": 1,
@@ -158,6 +218,18 @@
             {
                 "id": 5,
                 "img": "../../webp/Product/imageP3.webp"
+            }
+        ],
+        "kamusDetail": [
+            {
+                "mainDesc": "Plastik PET adalah thermoplastik yang transparan dan tahan lama dengan kode daur ulang angka 1.",
+                "merek": "Aqua, Le Minerale, Sprite, Coca-Cola, Pocari Sweat, Teh Pucuk, Ades, dan lain-lain.",
+                "potensi": "Serat sintetis (polyester), botol baru, kemasan makanan, hingga produk tekstil berkualitas.",
+                "kerjasama": [
+                    { "productId": 4 },
+                    { "productId": 5 },
+                    { "productId": 6 }
+                ]
             }
         ]
     }
