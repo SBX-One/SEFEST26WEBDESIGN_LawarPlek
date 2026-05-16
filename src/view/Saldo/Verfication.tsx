@@ -33,7 +33,7 @@ export default function VerificationCard() {
 
     return (
         <div className="px-5">
-            <Menu back="/Saldo" />
+            <Menu back="/Saldo" disabledd={!clickVerfikasi} />
             <div className="mt-10">
                 <h1 className="sm-semibold text-text-label">Nomor Akun</h1>
 

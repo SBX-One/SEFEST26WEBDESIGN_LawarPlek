@@ -6,7 +6,7 @@ import Footer from "../components/layout/footer"
 
 export default function Home() {
     return (
-        <div className="px-5 flex flex-col">
+        <div className="px-5 md:px-10 flex flex-col">
             <Navbar mode="home"/>
             <Balance />
             <Bantuan />

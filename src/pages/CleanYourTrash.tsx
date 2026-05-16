@@ -9,13 +9,13 @@ export default function CleanYourTrash() {
     const navigate = useNavigate()
 
     return (
-        <div className="p-5 flex flex-col">
-            <Menu back="/Home" />
+        <div className="p-5 md:p-10 flex flex-col">
+            <Menu back="/Home" onclick={() => navigate('/TrashCheckout')} />
             <SampahUmum />
             <ScanMeth />
             <AddSampahTemplate />
-            <div className="sticky bottom-10" onClick={() => navigate('/TrashCheckout')}>
-                <RigoButton inv={true} text="Lanjut" />
+            <div className="absolute bottom-10 md:hidden" onClick={() => navigate('/TrashCheckout')}>
+                <RigoButton inv={true} text="Lanjut"/>
             </div>
         </div>
     )

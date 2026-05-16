@@ -22,15 +22,27 @@ export default function EstimateTime() {
     ]
     
     return (
-        <div>
-            <div className="flex flex-row justify-between mt-10">
+        <div className="flex flex-col md:flex-row">
+            <div className="flex flex-row justify-between mt-10 md:hidden">
                 {EstList.map((item, i) => (
                     <div className="min-w-36.5 flex justify-center" key={i}>
                         <EstTime {...item} />
                     </div>
                 ))}
             </div>
-            <LoadBar />
+                <div className="flex flex-row justify-between w-full gap-12.5 py-5 mt-10">
+                    <div className="px-10.5">
+                        <EstTime {...EstList[0]} />
+                    </div>
+                    <LoadBar />
+                    <div className="px-10.5">
+                        <EstTime {...EstList[1]} />
+                    </div>
+                </div>
+
+                <div className="md:hidden block">
+                    <LoadBar />
+                </div>
         </div>
     )
 }

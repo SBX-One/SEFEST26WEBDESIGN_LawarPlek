@@ -1,6 +1,7 @@
 import { createContext, useState, useContext } from "react";
 // Perbaikan 1: Gunakan import type
 import type { ReactNode } from "react";
+import { useNavigate } from "react-router-dom";
 
 export interface SelectedTrashItem {
     name: string;
@@ -66,6 +67,8 @@ interface TrashContextType {
     setUserInput: (userInput: string) => void;
     chosenKamus: KamusItem | null;
     setChosenKamus: (chosenKamus: KamusItem) => void;
+    handleCariJemput: () => void
+
 }
 
 const TrashContext = createContext<TrashContextType | undefined>(undefined);
@@ -83,13 +86,21 @@ export function TrashProvider({ children }: { children: ReactNode }) {
     const [selectedMethod, setSelectedMethod] = useState<string>("")
     const [userInput, setUserInput] = useState<string>("");
     const [chosenKamus, setChosenKamus] = useState<KamusItem | null>(null);
+    const navigate = useNavigate();
+    const  handleCariJemput = () => {
+            setIsOrder(true);
+            navigate('/Home');
+    
+            console.log("back to home")
+        }
 
     return (
-        <TrashContext.Provider value={{ chosenKamus, setChosenKamus, userInput, setUserInput, itemNum, setItemNum, itemVariant, setItemVariant, totalHarga, setTotalHarga, completedHarga, setCompletedHarga, numSampah, setNumSampah, selectedTrash, setSelectedTrash, selectedProduct, setSelectedProduct, title, setTitle, isOrder, setIsOrder, selectedMethod, setSelectedMethod }}>
+        <TrashContext.Provider value={{ handleCariJemput, chosenKamus, setChosenKamus, userInput, setUserInput, itemNum, setItemNum, itemVariant, setItemVariant, totalHarga, setTotalHarga, completedHarga, setCompletedHarga, numSampah, setNumSampah, selectedTrash, setSelectedTrash, selectedProduct, setSelectedProduct, title, setTitle, isOrder, setIsOrder, selectedMethod, setSelectedMethod }}>
             {children}
         </TrashContext.Provider>
     );
 }
+
 
 export function useTrash() {
     const context = useContext(TrashContext);

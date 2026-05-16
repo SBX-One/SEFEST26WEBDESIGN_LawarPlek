@@ -24,24 +24,28 @@ export default function Balance() {
     ]
 
     return (
-        <div className="pt-5 pb-15 border-b-2 border-border-default mt-10 w-screen px-5 left-0 ml-[calc(50%-50vw)]">
-            <div className="flex flex-col gap-5">
-                <Search />
-                <BalanceViewer />
-            </div>
-            <div>
-                {isOrder && (
-                    <div onClick={() => navigate('/Receipt')} className="text-center py-5 border-2 relative border-border-default rounded-2xl object-cover overflow-hidden mt-2">
-                        <p className="xs-default text-text-placeholder">DK 2008 P</p>
-                        <h2 className="md-semibold text-text-label">~ 12 Minutes</h2>
-                        <div className="absolute bottom-0 w-full h-2 bg-surface-primary" />
+        <div className="pt-5 pb-15 border-b-2 md:pb-68.25 border-border-default mt-10 w-screen px-5 left-0 ml-[calc(50%-50vw)]">
+            <div className="md:max-w-75 md:mx-auto">            
+                <div className="flex flex-col gap-5">
+                    <div className="block md:hidden">
+                        <Search />
                     </div>
-                )}
-            </div>
-            <div className="grid grid-cols-2 gap-3 mt-4">
-                {SimpleButtonList.map((button, i) => (
-                    <SimpleButton key={i} {...button} />
-                ))}
+                    <BalanceViewer />
+                </div>
+                <div>
+                    {isOrder && (
+                        <div onClick={() => navigate('/Receipt')} className="text-center py-5 border-2 relative border-border-default rounded-2xl object-cover overflow-hidden mt-2">
+                            <p className="xs-default text-text-placeholder">DK 2008 P</p>
+                            <h2 className="md-semibold text-text-label">~ 12 Minutes</h2>
+                            <div className="absolute bottom-0 w-full h-2 bg-surface-primary" />
+                        </div>
+                    )}
+                </div>
+                <div className="grid grid-cols-2 gap-3 mt-4">
+                    {SimpleButtonList.map((button, i) => (
+                        <SimpleButton key={i} {...button} />
+                    ))}
+                </div>
             </div>
         </div>
     )

@@ -35,9 +35,9 @@ export default function CardViewer() {
     ]
 
     return (
-        <div className="px-5 mt-10">
+        <div className="px-5 md:px-10 mt-10">
             <h2 className="text-text-heading sm-semibold">Metode Transfer</h2>
-            <div className="flex flex-wrap justify-betweena gap-y-5">
+            <div className="grid grid-cols-2 gap-5 md:grid-cols-3 mt-5">
                 {MethodList.map((item, i) => (
                     <div key={i} onClick={() => {setSelectedMethod(item.logo); navigate(`/Saldo/Verification/${item.title}`)}} >
                         <LogoCard {...item} />

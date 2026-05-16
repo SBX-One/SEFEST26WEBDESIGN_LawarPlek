@@ -1,9 +1,10 @@
 import type { SimpleIconProps } from "../../../type/type"
 
-export default function SimpleIcon({ icon, iconWidth, border = true, roundede = 16 }: SimpleIconProps) {
+export default function SimpleIcon({ icon, iconWidth, border = true, roundede = 16, text, textClass }: SimpleIconProps) {
     return (
-        <div className={`p-3.5 ${border ? "border-2 border-border-default" : ""} w-fit`} style={{ borderRadius: `${roundede}px` }}>
+        <div className={`flex flex-row items-center gap-2 p-3.5 ${border ? "border-2 border-border-default" : ""} w-fit`} style={{ borderRadius: `${roundede}px` }}>
             <img src={icon} alt="icon" style={{ width: iconWidth }} />
+            <h1 className={textClass}>{text}</h1>
         </div>
     )
 }

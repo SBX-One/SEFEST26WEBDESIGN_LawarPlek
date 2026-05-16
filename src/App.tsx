@@ -16,8 +16,8 @@ import KamusDetail from "./view/Kamus/KamusDetail";
 
 function App() {
   return (
-    <TrashProvider>
-      <BrowserRouter>
+    <BrowserRouter>
+        <TrashProvider>
         <Routes>
           <Route path="/" element={<HomePages />} />
           <Route path="/Home" element={<Home />} />
@@ -34,8 +34,8 @@ function App() {
           <Route path="/Kamus" element={<Kamus />} />
           <Route path="/Kamus/:chosenKamus" element={<KamusDetail />} />
         </Routes>
+        </TrashProvider>
       </BrowserRouter>
-    </TrashProvider>
   );
 }
 

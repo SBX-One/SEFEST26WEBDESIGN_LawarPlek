@@ -5,6 +5,7 @@ import DropDown from "../navigation/DropDown"
 import chevron from "../../assets/svg/chevron-right.svg"
 import ListData from "../../data/ListData"
 import cart from "../../assets/svg/shopping-cart.svg"
+import search from "../../assets/svg/search.svg"
 
 import {useState} from "react"
 import RigoButton from "../ui/button/RigoButton"
@@ -34,8 +35,9 @@ export default function Navbar({ mode }: NavbarProps) {
         <div className="sticky top-0 z-200">
             <div className={`bg-neutral-white left-0 w-screen ml-[calc(50%-50vw)] py-10 desktop:py-7.5 md:py-14 px-5 md:px-15 xl:px-30 flex justify-between border-b-2 border-[#DEDEDE] items-center ${mode === 'home' ? 'max-h-21' : ''}`}>
                 <img src={mode === 'home' ? mainLogo : Logo} alt="Company Logo" className={`${mode === 'home' ? 'w-6' : ''}`} onClick={() => navigate('/Home')} />
-                <div className="flex flex-row items-center">
-                    <img onClick={() => navigate('/Keranjang')} src={cart} alt="Cart" className={`w-4 h-4 m-3.5 relative right-3 ${mode === 'home' ? 'block' : 'hidden'}`} />
+                <div className="flex flex-row items-center gap-6">
+                    <img onClick={() => navigate('/Keranjang')} src={cart} alt="Cart" className={`w-4 h-4 relative right-3 ${mode === 'home' ? 'block' : 'hidden'}`} />
+                    <img src={search} alt="" className="p-3.5 hidden md:block" />
                     <img src={isMenuOpen ? chevron : Burger} onClick={() => setIsMenuOpen(!isMenuOpen)} alt="menu" className={`p-4.5 ${mode === 'home' ? 'rounded-2xl' : 'rounded-full'} border-border-default border desktop:hidden ${isMenuOpen ? 'rotate-90' : ''}`} />
                     <div className="desktop:flex hidden gap-4">
                         {ListData.map((link, index) => (

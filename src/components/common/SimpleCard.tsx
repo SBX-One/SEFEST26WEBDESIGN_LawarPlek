@@ -52,9 +52,10 @@ export default function SimpleCard({ title, desc, button = true, icon, numSampah
 
 
     return (
-        <div className={`${mode === "add" ? "justify-center items-center" : ""} relative p-3 h-37.5 w-37.5 flex flex-col bg-neutral-white rounded-2xl border-2 border-border-default`}>
+        <div className={`${mode === "add" ? "justify-center items-center" : ""} relative p-3 h-37.5 flex-1 flex flex-col bg-neutral-white rounded-2xl border-2 border-border-default`}>
             <div className="flex flex-row-reverse">
-                <img src={check} alt="stats" className={`w-4 h-4 ${mode === "add" ? "hidden" : ""}`} />
+                    <h1 className={`xs-default text-text-action ml-2 ${mode === "add" ? "hidden" : "hidden md:block"}`}>50%</h1>
+                    <img src={check} alt="stats" className={`w-4 h-4 ${mode === "add" ? "hidden" : ""}`} />
                 <div className="flex flex-1 flex-col">
                     <h1 className="sm-semibold text-text-heading">{title}</h1>
                     <p className="xs-default text-text-placeholder">{desc}</p>

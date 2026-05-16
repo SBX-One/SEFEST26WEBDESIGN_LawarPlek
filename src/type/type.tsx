@@ -55,7 +55,7 @@ export type NavbarProps = {
 export type SimpleButtonProps = {
     text?: string;
     icon?: string;
-    onClick: () => void;
+    onClick?: () => void;
 }
 
 export type ProductCardProps = {
@@ -91,6 +91,8 @@ export type MenuProps = {
     setTotalHarga?: Dispatch<SetStateAction<number>>
     back: string | number;
     mode?: string
+    onclick?: () => void;
+    disabledd?: boolean;
 }
 
 export type SimpleIconProps = {
@@ -98,12 +100,14 @@ export type SimpleIconProps = {
     iconWidth: number;
     border?: boolean;
     roundede?: number;
+    text?: string;
+    textClass?: string;
 }
 
 export type BarProps = {
     title: string | string[];
     desc: string | number;
-    iconR?: string;
+    iconR?: string | React.ReactNode;
     iconL?: string;
     iconLBorder?: boolean;
     iconRBorder?: boolean;
@@ -123,4 +127,10 @@ export type SimpleTinyPill = {
 export type LogoCardProps = {
     logo: string;
     title: string;
+}
+
+export type ButtonPillProps = {
+    text: string;
+    onclick?: () => void;
+    disabledd: boolean;
 }

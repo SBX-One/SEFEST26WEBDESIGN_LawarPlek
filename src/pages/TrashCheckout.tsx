@@ -13,7 +13,7 @@ const SampahList = [
 ];
 
 export default function TrashCheckout() {
-    const { numSampah, setTotalHarga } = useTrash();
+    const { numSampah, setTotalHarga, handleCariJemput } = useTrash();
 
     // Hitung total harga setiap kali numSampah berubah
     useEffect(() => {
@@ -25,7 +25,7 @@ export default function TrashCheckout() {
 
     return (
         <div className="p-5 flex flex-col">
-            <Menu back="/ScanYourTrash" />
+            <Menu back="/ScanYourTrash" onclick={handleCariJemput} />
             <LokasiJemput />
             <WaktuJemput />
             <IsiSampah />
