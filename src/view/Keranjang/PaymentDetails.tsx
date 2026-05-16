@@ -6,6 +6,7 @@ import HitungTotalHarga from "../../type/HitungTotalHarga";
 import RigoButton from "../../components/ui/button/RigoButton";
 import { useNavigate } from "react-router-dom";
 import { useTrash } from "../../context/TrashContext";
+import useWindowSize from "../../type/WindowWidthCheck";
 
 export default function PaymentDetails() {
     const totalHarga = HitungTotalHarga(Data);
@@ -14,18 +15,20 @@ export default function PaymentDetails() {
     const subTotal = Data.map(item => item.harga * item.jumlah);
     const navigate = useNavigate();
     const { setIsOrder } = useTrash();
-
+    const windowWidth = useWindowSize();
+    const isMobile = windowWidth <= 768;
+;
     function handleCheckOut() {
         navigate('/Home');
         setIsOrder(true);
     }
     
     return (
-        <div className="p-5 border-2 border-border-default rounded-t-xl mt-10">
+        <div className="p-5 border-2 border-border-default rounded-t-xl mt-10 md:pb-25">
             <Bar title="Rp100.000 - Rp42.000" desc={"GREGO Wallet"} iconL={mainLogo} iconR={ellipse} iconRBorder={false} />
             
             <h1>Detail Pembayaran: </h1>
-            <div className="flex flex-col gap-2 pb-12.5 mb-10">
+            <div className="flex flex-col gap-2 pb-12.5 mb-10 md:mb-14">
                 {Data.map((item, i) => (
                     <div key={i} className="flex flex-row justify-between sm-default text-text-body">
                         <h1>{item.jumlah}X {item.namaBarang}</h1>
@@ -41,8 +44,7 @@ export default function PaymentDetails() {
                     <p>{priceFormat}</p>
                 </div>
             </div>
-            
-            <RigoButton text="Checkout" inv={true} onClick={handleCheckOut} />
+            <RigoButton icon={isMobile} fullWidth={true} text="Checkout" inv={true} onClick={handleCheckOut} />
         </div>
     )
 }

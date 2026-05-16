@@ -7,6 +7,7 @@ export type RIGOBTNPROPS = {
     icon?: boolean
     onClick?: () => void;
     disabled?: boolean;
+    fullWidth?: boolean;
 }  
 
 export type WWSCardProps = {

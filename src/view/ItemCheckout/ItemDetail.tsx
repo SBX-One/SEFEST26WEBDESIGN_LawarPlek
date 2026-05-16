@@ -97,24 +97,19 @@ export default function ItemDetail() {
         <div className="flex flex-col">
             <div className="p-5 flex flex-col flex-1">
                 <div className="flex flex-col h-full">
-                    <div className="flex justify-center">
-                        <img src={productImage} alt={productName} className="h-60.5 object-contain" />
+                    <div className="flex justify-center border-2 border-border-default rounded-2xl md:py-10">
+                        <img src={productImage} alt={productName} className="h-60.5 md:h-100 object-contain" />
                     </div>
 
-                    <div className="flex flex-row gap-3 overflow-auto -mx-5 pl-5 mb-5">
+                    <div className="flex flex-row gap-3 overflow-auto -mx-5 md:mx-0 pl-5 md:pl-0 mb-5 md:mt-5">
                         {selectedProduct?.variant.map((item, i) => (
-                            <div key={i}>
-                                <SimplePill text={item} isSelected={selectedVariant === item}
-                                    onClick={() => {
-                                        setSelectedVariant(item);
-                                        setItemVariant(item);
-                                    }}
-                                />
+                            <div key={i} className=" flex flex-1">
+                                <SimplePill text={item} isSelected={selectedVariant === item} onClick={() => {setSelectedVariant(item); setItemVariant(item); }}/>
                             </div>
                         ))}
                     </div>
 
-                    <div className="border-2 border-border-default p-5 rounded-2xl flex flex-col flex-1">
+                    <div className="border-2 border-border-default p-5 relative rounded-2xl flex flex-col flex-1">
                         <div className="mb-3 flex flex-col gap-3">
                             <h1 className="text-text-heading lg-semibold">
                                 {selectedProduct?.title || productName?.replace(/\+/g, ' ')}
@@ -125,11 +120,11 @@ export default function ItemDetail() {
                         </div>
                         <p className="text-text-body mb-auto xs-default">{selectedProduct?.desc}</p>
 
-                        <div className="flex flex-row gap-3 w-full mt-18">
+                        <div className="flex flex-row gap-3 w-full mt-18 md:w-fit md:ml-auto">
                             <div className="w-fit" onClick={() => navigate('/Keranjang')}>
                                 <SimpleIcon icon={cart} iconWidth={16} />
                             </div>
-                            <div className="flex flex-1 items-center">
+                            <div className="flex flex-1 items-center md:min-w-48.5">
                                 {isButtonClick ? (
                                     <div className="flex flex-1 flex-row-reverse justify-between items-center">
                                         <button onClick={handleAdd}>
