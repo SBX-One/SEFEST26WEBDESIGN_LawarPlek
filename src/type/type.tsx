@@ -94,6 +94,7 @@ export type MenuProps = {
     mode?: string
     onclick?: () => void;
     disabledd?: boolean;
+    btn?: boolean;
 }
 
 export type SimpleIconProps = {

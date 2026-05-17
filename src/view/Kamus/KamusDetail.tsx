@@ -37,7 +37,7 @@ export default function KamusDetail() {
 
     return (
         <div className="pt-5">
-            <Menu back={-1} mode="setting" />
+            <Menu back={-1} mode="setting" btn={false} />
             <div className="bg-diagonal-line px-5 pt-4 relative overflow-hidden max-h-75">
                 <div className="flex flex-row w-full flex-1 gap-3">
                     <SimpleButton icon={barcode} text="Scan" onClick={() => navigate('/Home')} />
@@ -79,8 +79,8 @@ export default function KamusDetail() {
                                                 const imageSrc = imageMap[product.img] ?? '/placeholder.webp';
                                                 return (
                                                     <div key={kdx} onClick={() => handleProductClick(product.id)} className="flex flex-col gap-5 min-w-max cursor-pointer">
-                                                        <div className="bg-surface-default px-9.25 h-50 flex items-center justify-center rounded-sm border-2 border-border-default transition-all duration-200 hover:bg-surface-disabled">
-                                                            <img src={imageSrc} alt={product.title} className="h-35.25 object-cover" />
+                                                        <div className="bg-surface-default px-9.25 py-7.5 flex items-center justify-center rounded-sm border-2 border-border-default transition-all duration-200 hover:bg-surface-disabled">
+                                                            <img src={imageSrc} alt={product.title} className="h-35.25 md:h-63.25 object-cover" />
                                                         </div>
                                                     </div>
                                                 );

@@ -7,7 +7,7 @@ import SimpleIcon from "../ui/icons/SimpleIcon";
 import setting from "../../assets/svg/settings.svg"
 import RigoButton from "../ui/button/RigoButton";
 
-export default function Menu({ back, mode, onclick, disabledd }: MenuProps) {
+export default function Menu({ back, mode, onclick, disabledd, btn = true }: MenuProps) {
     const { totalHarga } = useTrash();
     const navigate = useNavigate();
     
@@ -24,9 +24,11 @@ export default function Menu({ back, mode, onclick, disabledd }: MenuProps) {
                         <SimplePill text={`Total : Rp. ${totalHarga.toLocaleString('id-ID')}`} />
                     )
                 )}
-                <div className="hidden md:block">
-                    <RigoButton inv={true} text="Lanjut" onClick={onclick} disabled={disabledd} />
-                </div>
+                {btn && (
+                    <div className="hidden md:block">
+                        <RigoButton inv={true} text="Lanjut" onClick={onclick} disabled={disabledd} />
+                    </div>
+                )}
             </div>
         </div>
     )

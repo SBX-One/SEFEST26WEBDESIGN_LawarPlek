@@ -27,7 +27,7 @@ export default function MainKamus() {
     }
 
     return (
-        <div className="flex flex-col gap-5 mb-30 mt-5">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mb-30 mt-5">
             {DataKamus.map((item, i) => (
                 <div key={i} onClick={() => handleKamusDetail(item)} className="border-2 border-border-default rounded-2xl p-5 flex flex-col gap-5">
                     <div className="border-b-2 border-border-default -mx-5 px-5 pb-5 flex flex-col gap-1.5">
