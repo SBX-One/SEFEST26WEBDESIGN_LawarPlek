@@ -42,18 +42,10 @@ export default function PartnerBanner() {
 
     return (
         <div className="h-36 w-screen left-0 ml-[calc(50%-50vw)] bg-neutral-white border-y-2 relative z-20 border-border-default overflow-hidden flex items-center">
-            <div
-                ref={trackRef}
-                className="flex items-center gap-16 will-change-transform"
-                style={{ width: "max-content" }}
-            >
+            <div ref={trackRef} className="flex items-center gap-16 will-change-transform" style={{ width: "max-content" }}>
                 {doubled.map((Partner, i) => (
                     <div key={i} className="shrink-0 px-8">
-                        <img
-                            src={Partner}
-                            alt={`partner-${i}`}
-                            className="h-10 w-auto object-contain"
-                        />
+                        <img src={Partner} alt={`partner-${i}`} className="h-10 w-auto object-contain"/>
                     </div>
                 ))}
             </div>

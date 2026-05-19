@@ -2,15 +2,18 @@ import logo from "../../assets/svg/LogoMain.svg"
 import RigoButton from "../../components/ui/button/RigoButton"
 import CustomClassFunction from "../../function/CustomClassFunction"
 // import { useRef } from "react"
+import { useNavigate } from "react-router-dom";
 
 export default function PageHeading() {
     CustomClassFunction({CustomWidth: 768, CustomClass: "display", divRef:"HeadingText", RemoveCustomClass: "h1-heading"});
     CustomClassFunction({CustomWidth: 768, CustomClass: "lg-default", divRef:"ParaText", RemoveCustomClass: "sm-default"});
+    const navigate = useNavigate();
 
     const HeadingPageBtnList = [
         {
             text: "Mulai Belanja",
-            inv: true
+            inv: true,
+            onclick: () => {navigate('/Home')}
         },
         {
             text: "Lihat Demo",
@@ -36,7 +39,7 @@ export default function PageHeading() {
 
             <div className="flex gap-4 flex-col md:flex-row md:mx-auto">
                 {HeadingPageBtnList.map((btn, i) => (
-                    <RigoButton key={i} inv={btn.inv} text={btn.text} />
+                    <RigoButton key={i} inv={btn.inv} text={btn.text} onClick={btn.onclick} />
                 ))}
             </div>
         </div>

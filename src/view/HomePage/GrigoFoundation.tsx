@@ -30,7 +30,7 @@ export default function GrigoFoundation() {
     return (
         <div className="border-2 border-border-default rounded-xl -mx-3 md:-mx-10 bg-neutral-white mt-32 ">
             <div className="pt-15 px-3 pb-15 md:pb-24 relative">
-                <div className="-mx-3 border-b-2 border-border-default mb-10">
+                <div className="-mx-3 border-b-2 px-5 border-border-default mb-10">
                     <div className="w-fit md:mx-auto">
                         <LogoPill text="Grigo Foundation" />
                     </div>

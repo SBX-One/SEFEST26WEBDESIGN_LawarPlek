@@ -81,9 +81,9 @@ export default function Bantuan() {
                     <p className="sm-default text-text-placeholder px-5 mt-6 desktop:max-w-xl desktop:mx-auto">Ekosistem sirkular pertama yang menjemput sampah di depan pintu Anda dan mengubahnya menjadi poin belanja di E-commerce eksklusif.</p>
                 </div>
             </div>
-            <div className="flex flex-row gap-5 mt-20">
+            <div className="md:flex hidden flex-row gap-5 mt-20">
                 <Search />
-                <SimpleIcon icon={setting2} iconWidth={16} text="Filter" textClass="text-text-label label-semibold" />
+                <SimpleIcon icon={setting2} iconWidth={16} text="Filter" textClass="text-text-label label-semibold pr-3.5" />
             </div>
         </div>
     </div>

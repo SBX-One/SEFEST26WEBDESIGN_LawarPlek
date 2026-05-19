@@ -30,7 +30,7 @@ export default function ProdctList() {
                             <ProductCard {...product} />
                         </div>
                         
-                        <div className="hidden md:block">
+                        <div className="hidden md:block mt-10">
                             <SimpleButton text="Tambah Keranjang" />
                         </div>
                     </div>
