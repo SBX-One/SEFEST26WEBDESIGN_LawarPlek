@@ -37,7 +37,7 @@ export default function ProdctList() {
                 ))}
             </div>
                 <div className="flex w-full mt-10">
-                    <RigoButton text="View more" inv={true} fullWidth={true} />
+                    <RigoButton text="View more" inv={true} fullWidth={true} onClick={() => navigate('/Shop')} />
                 </div>
         </div>
     )

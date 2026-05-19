@@ -32,7 +32,7 @@ export default function VerificationCard() {
     }
 
     return (
-        <div className="px-5">
+        <div className="px-5 max-w-205 mx-auto">
             <Menu back="/Saldo" disabledd={!clickVerfikasi} />
             <div className="mt-10">
                 <h1 className="sm-semibold text-text-label">Nomor Akun</h1>
@@ -55,8 +55,8 @@ export default function VerificationCard() {
                     </div>
                 )}
             </div>
-            <div className="absolute bottom-10 w-full px-5 left-0"> 
-                <RigoButton text="Lanjut" inv={true} disabled={!clickVerfikasi} />
+            <div className="absolute md:hidden bottom-10 w-full px-5 left-0"> 
+                <RigoButton text="Lanjut" inv={true} disabled={!clickVerfikasi} onClick={handleVerfication} />
             </div>
         </div> 
     )

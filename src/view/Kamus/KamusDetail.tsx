@@ -8,7 +8,9 @@ import ProductData from "../../data/ProductData.json"
 import { getProductionImageMap } from "../../type/useProductImage";
 import MainKamus from "./MainKamus";
 import Footer from "../../components/layout/footer";
-import Menu from "../../components/layout/Menu";
+import setting from "../../assets/svg/settings.svg"
+import chevron from "../../assets/svg/chevron-right.svg"
+import SimpleIcon from "../../components/ui/icons/SimpleIcon";
 
 export default function KamusDetail() {
     const navigate = useNavigate();
@@ -37,16 +39,33 @@ export default function KamusDetail() {
 
     return (
         <div className="pt-5">
-            <Menu back={-1} mode="setting" btn={false} />
-            <div className="bg-diagonal-line px-5 pt-4 relative overflow-hidden max-h-75">
-                <div className="flex flex-row w-full flex-1 gap-3">
+            <div className="relative flex flex-row items-center border-b-2 border-border-default">
+                <div className="md:flex flex-row gap-3 items-center">
+                    <div className="rotate-180 w-fit py-5 px-10" onClick={() => navigate(-1)}> 
+                        <SimpleIcon icon={chevron} iconWidth={16} />
+                    </div>
+                    <div className="hidden md:flex flex-row items-center gap-3">
+                        <h1 className="sm-semibold text-text-placeholder">Home</h1>
+                        <img src={chevron} alt="" />
+                        <h1 className="sm-semibold text-text-placeholder">Home</h1>
+                        <img src={chevron} alt="" />
+                        <h1 className="sm-semibold text-text-action">Home</h1>
+                    </div>
+                </div>
+                <h1 className="hidden lg-semibold text-text-heading md:hidden desktop:flex h-fit w-fit mx-auto">Kamus Sampah</h1>
+                <div className="rotate-180 w-fit py-5 px-10 ml-auto desktop:ml-0"> 
+                    <SimpleIcon icon={setting} iconWidth={16} />
+                </div>
+            </div>
+            <div className="bg-diagonal-line px-5 pt-4 relative overflow-hidden max-h-75 desktop:max-h-118">
+                <div className="flex flex-row w-full flex-1 desktop:max-w-85.5 mx-auto gap-3">
                     <SimpleButton icon={barcode} text="Scan" onClick={() => navigate('/Home')} />
                     <SimpleButton icon={cart} text="Shop" onClick={() => navigate('/Home')} />
                 </div>
-                <img src={ProductCluster} alt="image" className="h-68 object-cover relative top-5" />
+                <img src={ProductCluster} alt="image" className="h-68 desktop:h-105 object-cover relative top-5 mx-auto desktop:top-32" />
             </div>
             
-            <div className="p-5 mb-8">
+            <div className="p-5 mb-8 max-w-282.5 mx-auto">
                 <div className="pb-5 border-b-2 border-border-default">
                     <h2 className="h2-heading text-text-heading mb-4">{chosenKamus?.title}</h2>
                     <p className="xs-default text-text-placeholder">{chosenKamus?.kamusDetail.map((item) => item.mainDesc)}</p>
@@ -94,8 +113,8 @@ export default function KamusDetail() {
                 )}
             </div>
 
-            <div className="px-5">
-                <MainKamus />
+            <div className="px-5 max-w-282.5 mx-auto">
+                <MainKamus searchBar={false} />
                 <Footer />
             </div>
         </div>

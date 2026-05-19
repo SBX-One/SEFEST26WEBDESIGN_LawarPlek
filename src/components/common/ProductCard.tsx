@@ -17,10 +17,10 @@ export default function ProductCard({ img, title, harga }: ProductCardProps) {
             <img src={src} alt={title} className="h-full w-full object-contain p-3" />
         </div>
 
-    <div className="text-left flex flex-col">
-        <p className="sm-semibold text-text-heading">{'Rp.' + hargaDone}</p>
-        <h3 className="text-text-placeholder xs-default">{title}</h3>
-    </div>
-</div>
+            <div className="text-left flex flex-col">
+                <p className="sm-semibold text-text-heading">{'Rp.' + hargaDone}</p>
+                <h3 className="text-text-placeholder xs-default">{title}</h3>
+            </div>
+        </div>
     )
 }

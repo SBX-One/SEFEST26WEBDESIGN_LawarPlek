@@ -94,14 +94,17 @@ export default function ItemDetail() {
     }
 
     return (
-        <div className="flex flex-col">
+        <div className="flex flex-col max-w-305 mx-auto h-screen max-h-175">
             <div className="p-5 flex flex-col flex-1">
-                <div className="flex flex-col h-full">
-                    <div className="flex justify-center md:border-2 border-border-default rounded-2xl md:py-10">
-                        <img src={productImage} alt={productName} className="h-60.5 mb-5 md:h-100 object-contain" />
+                <div className="flex flex-col h-full relative desktop:flex-row gap-10 desktop:justify-between desktop:max-h-screen desktop:overflow-hidden">
+                    <div>
+                        
+                    </div>
+                    <div className="flex justify-center  flex-1 md:border-2 border-border-default rounded-2xl md:py-10 desktop:max-h-screen">
+                        <img src={productImage} alt={productName} className="h-60.5 mb-5 md:h-100 desktop:max-h-screen object-contain" />
                     </div>
 
-                    <div className="flex flex-row gap-3 overflow-auto -mx-5 md:mx-0 pl-5 md:pl-0 mb-5 md:mt-5">
+                    <div className="flex flex-row gap-3 left-115 overflow-auto -mx-5 md:mx-0 pl-5 md:pl-0 mb-5 md:mt-5 desktop:flex-col desktop:absolute">
                         {selectedProduct?.variant.map((item, i) => (
                             <div key={i} className=" flex flex-1">
                                 <SimplePill text={item} isSelected={selectedVariant === item} onClick={() => {setSelectedVariant(item); setItemVariant(item); }}/>
@@ -109,7 +112,7 @@ export default function ItemDetail() {
                         ))}
                     </div>
 
-                    <div className="border-2 border-border-default p-5 relative rounded-2xl flex flex-col flex-1">
+                    <div className="border-2 border-border-default p-5 relative rounded-2xl flex max-h-112.5 flex-col flex-1 max-w-165">
                         <div className="mb-3 flex flex-col gap-3">
                             <h1 className="text-text-heading lg-semibold">
                                 {selectedProduct?.title || productName?.replace(/\+/g, ' ')}
@@ -119,10 +122,10 @@ export default function ItemDetail() {
                             </p>
                         </div>
                         <p className="text-text-body mb-auto xs-default">{selectedProduct?.desc}</p>
-
+                        <hr className="border-t border-border-disabled relative top-10" />
                         <div className="flex flex-row gap-3 w-full mt-18 md:w-fit md:ml-auto">
                             <div className="w-fit" onClick={() => navigate('/Keranjang')}>
-                                <SimpleIcon icon={cart} iconWidth={16} />
+                                <SimpleIcon icon={cart} iconWidth={16} text="Keranjang" textClass="desktop:block hidden text-text-action" />
                             </div>
                             <div className="flex flex-1 items-center md:min-w-48.5">
                                 {isButtonClick ? (

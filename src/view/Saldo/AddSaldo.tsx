@@ -52,8 +52,8 @@ export default function AddSaldo() {
     };
 
     return (
-        <div className="px-5">
-            <Menu back={-1} />
+        <div className="px-5 max-w-205 mx-auto">
+            <Menu back={-1} onclick={handleTransfer} />
             <div className="mt-10">
                 <Bar title={usrName} desc={userInput} iconL={selectedMethod} iconR={ellipse} iconRBorder={false} />
                 <div>
@@ -63,7 +63,7 @@ export default function AddSaldo() {
                     </div>
                 </div>
             </div>  
-            <div className="absolute w-full px-5 left-0 bottom-20">
+            <div className="absolute w-full px-5 left-0 bottom-20 md:hidden">
                 <RigoButton inv={true} text="Transfer" onClick={handleTransfer} />
             </div>
         </div>

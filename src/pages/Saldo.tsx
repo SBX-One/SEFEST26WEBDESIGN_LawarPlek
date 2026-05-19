@@ -6,7 +6,7 @@ export default function Saldo() {
     const saldo = Data.map(item => item.saldo).toLocaleString('id-ID')
     console.log(saldo)
     return (
-        <div>
+        <div className="max-w-205 desktop:mx-auto">
             <Menu back="/Home" TotalHarga={saldo} />
             <CardViewer />
         </div>

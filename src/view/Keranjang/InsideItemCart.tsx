@@ -10,6 +10,7 @@ import SimpleIcon from "../../components/ui/icons/SimpleIcon";
 import RigoButton from "../../components/ui/button/RigoButton";
 import plus from "../../assets/svg/plus.svg"
 import minus from "../../assets/svg/minus.svg"
+import PaymentDetails from "./PaymentDetails";
 
 // Membuat tipe data untuk melacak jumlah item berdasarkan ID atau index string/number
 interface CartQuantities {
@@ -69,40 +70,45 @@ export default function InsideItemCart() {
     return ( 
         <div className="px-5 mt-5">
             <Bar iconL={house} iconR={map} title="Jl. Pulau Ambon No.8" desc="Denpasae Barat, Bali" />
+            <div className="flex flex-row gap-5 desktop:mt-16">
+                <div className="desktop:w-1/2">
+                <div className="mt-10 desktop:mt-0">
+                    <h1 className="sm-semibold text-text-label">Sampah Umum</h1>
+                </div>
 
-            <div className="mt-10">
-                <h1 className="sm-semibold text-text-label">Sampah Umum</h1>
-            </div>
+                <div className="flex flex-col gap-5 mt-4">
+                    {data.map((item, i) => {
+                        // Ambil identifier unik barang. Gunakan item.id jika ada, jika tidak ada pakai index `i`
+                        const itemId = item.id || i; 
+                        const currentItemQty = quantities[itemId] || 0;
 
-            <div className="flex flex-col gap-5 mt-4">
-                {data.map((item, i) => {
-                    // Ambil identifier unik barang. Gunakan item.id jika ada, jika tidak ada pakai index `i`
-                    const itemId = item.id || i; 
-                    const currentItemQty = quantities[itemId] || 0;
-
-                    return (
-                        <div key={i} className="relative">
-                            <div className="absolute right-5 top-4 min-w-48.5 hidden md:block   ">
-                                {/* Cek apakah item ini sudah pernah diklik (qty > 0) */}
-                                {currentItemQty > 0 ? (
-                                    <div className="flex flex-1 flex-row-reverse justify-between items-center">
-                                        <button onClick={() => handleAdd(itemId)}>
-                                            <SimpleIcon icon={plus} iconWidth={16} />
-                                        </button>
-                                        <p className="text-text-body">{currentItemQty}</p>
-                                        <button onClick={() => handleSubtract(itemId)}>
-                                            <SimpleIcon icon={minus} iconWidth={16} />
-                                        </button>
-                                    </div>
-                                ) : (
-                                    <RigoButton text="Tambah Keranjang" inv={true} icon={false} onClick={() => handleAdd(itemId)} />
-                                )}
+                        return (
+                            <div key={i} className="relative">
+                                <div className="absolute right-5 top-4 min-w-48.5 hidden md:block   ">
+                                    {/* Cek apakah item ini sudah pernah diklik (qty > 0) */}
+                                    {currentItemQty > 0 ? (
+                                        <div className="flex flex-1 flex-row-reverse justify-between items-center">
+                                            <button onClick={() => handleAdd(itemId)}>
+                                                <SimpleIcon icon={plus} iconWidth={16} />
+                                            </button>
+                                            <p className="text-text-body">{currentItemQty}</p>
+                                            <button onClick={() => handleSubtract(itemId)}>
+                                                <SimpleIcon icon={minus} iconWidth={16} />
+                                            </button>
+                                        </div>
+                                    ) : (
+                                        <RigoButton text="Tambah Keranjang" inv={true} icon={false} onClick={() => handleAdd(itemId)} />
+                                    )}
+                                </div>
+                                <Bar iconL={Image} title={item.namaBarang + " " + item.variant} desc={item.harga + " coin"} />
                             </div>
-                            <Bar iconL={Image} title={item.namaBarang + " " + item.variant} desc={item.harga + " coin"} />
-                        </div>
-                    );
-                })}
+                        );
+                    })}
+                </div>
+                </div>
+                    <PaymentDetails />
             </div>
+
         </div>
     )
 }

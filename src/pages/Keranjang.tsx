@@ -7,7 +7,6 @@ export default function Keranjang() {
         <div>
             <NavbarKeranjang />
             <InsideItemCart />
-            <PaymentDetails />
         </div>
     )
 }

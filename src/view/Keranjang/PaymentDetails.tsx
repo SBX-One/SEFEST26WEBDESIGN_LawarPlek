@@ -24,7 +24,7 @@ export default function PaymentDetails() {
     }
     
     return (
-        <div className="p-5 border-2 border-border-default rounded-t-xl mt-10 md:pb-25">
+        <div className="p-5 border-2 border-border-default rounded-t-xl desktop:rounded-xl mt-10 md:pb-25 desktop:w-1/2 desktop:mt-0">
             <Bar title="Rp100.000 - Rp42.000" desc={"GREGO Wallet"} iconL={mainLogo} iconR={ellipse} iconRBorder={false} />
             
             <h1>Detail Pembayaran: </h1>

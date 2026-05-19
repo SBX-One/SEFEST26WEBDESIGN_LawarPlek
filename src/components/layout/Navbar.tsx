@@ -6,11 +6,14 @@ import chevron from "../../assets/svg/chevron-right.svg"
 import ListData from "../../data/ListData"
 import cart from "../../assets/svg/shopping-cart.svg"
 import search from "../../assets/svg/search.svg"
+import map from "../../assets/svg/map.svg"
+import setting from "../../assets/svg/settings.svg"
 
 import {useState} from "react"
 import RigoButton from "../ui/button/RigoButton"
 import type { NavbarProps } from "../../type/type"
 import { useNavigate } from "react-router-dom"
+import SimpleIcon from "../ui/icons/SimpleIcon"
 
 export default function Navbar({ mode }: NavbarProps) {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -34,21 +37,24 @@ export default function Navbar({ mode }: NavbarProps) {
     return (
         <div className="sticky top-0 z-200">
             <div className={`bg-neutral-white left-0 w-screen ml-[calc(50%-50vw)] py-10 desktop:py-7.5 md:py-14 px-5 md:px-15 xl:px-30 flex justify-between border-b-2 border-[#DEDEDE] items-center ${mode === 'home' ? 'max-h-21' : ''}`}>
-                <img src={mode === 'home' ? mainLogo : Logo} alt="Company Logo" className={`${mode === 'home' ? 'w-6' : ''}`} onClick={() => navigate('/Home')} />
-                <div className="flex flex-row items-center gap-6">
-                    <img onClick={() => navigate('/Keranjang')} src={cart} alt="Cart" className={`w-4 h-4 relative right-3 ${mode === 'home' ? 'block' : 'hidden'}`} />
-                    <img src={search} alt="" className="p-3.5 hidden md:block" />
+                <img src={Logo} alt="Company Logo" className={`${mode === "home" ? "pr-14 border-r-2 border-border-default" : ""}`} onClick={() => navigate('/Home')} />
+                <div className="flex flex-row desktop:flex-row-reverse desktop:w-full items-center gap-6">
+                    <div className="flex flex-row desktop:flex-row-reverse items-center gap-6 desktop:mr-6">
+                        <img onClick={() => navigate('/Keranjang')} src={cart} alt="Cart" className={`w-4 h-4 relative right-3 ${mode === 'home' ? 'block' : 'hidden'}`} />
+                        <img src={search} alt="" className="p-3.5 hidden md:block" />
+                    </div>
                     <img src={isMenuOpen ? chevron : Burger} onClick={() => setIsMenuOpen(!isMenuOpen)} alt="menu" className={`p-4.5 ${mode === 'home' ? 'rounded-2xl' : 'rounded-full'} border-border-default border desktop:hidden ${isMenuOpen ? 'rotate-90' : ''}`} />
-                    <div className="desktop:flex hidden gap-4">
-                        {ListData.map((link, index) => (
+                    <div className="desktop:flex hidden gap-4 mr-auto pl-14">
+                        {HomeModeList.map((link, index) => (
                             <a key={index} href={link.links} className="label-default text-foreground py-1.5 px-3">
                                 {link.title}
                             </a>
                         ))}
                     </div>
                 </div>
-                <div className="hidden desktop:block">
-                    <RigoButton text="Daftar" inv={true} icon={false} />
+                <div className="hidden desktop:flex flex-row gap-6">
+                    <SimpleIcon icon={map} iconWidth={16} text="Denpasar Barat" textClass="text-text-action label-semibold pr-3.5" />
+                    <SimpleIcon icon={setting} iconWidth={16} text="s" textClass="label-semibold -pr-3.5" />
                 </div>
             </div>
             <div>

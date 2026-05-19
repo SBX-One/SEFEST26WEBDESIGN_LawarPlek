@@ -24,7 +24,7 @@ export default function TrashCheckout() {
     }, [numSampah, setTotalHarga]);
 
     return (
-        <div className="p-5 flex flex-col">
+        <div className="p-5 flex flex-col max-w-205 mx-auto">
             <Menu back="/ScanYourTrash" onclick={handleCariJemput} />
             <LokasiJemput />
             <WaktuJemput />

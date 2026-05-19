@@ -47,7 +47,7 @@ export default function AddSampahMain() {
     }
 
     return (
-        <div className="px-5">
+        <div className="px-5 max-w-205 mx-auto">
             <Menu back={-1} mode="add"/>
             <div className="mb-3 mt-10">
                 <h1 className="xs-default text-text-label">Jenis / Nama Sampah</h1>

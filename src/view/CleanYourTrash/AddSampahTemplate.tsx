@@ -7,7 +7,7 @@ export default function AddSampahTemplate() {
             {Data.map((item, i) => (
                 <div key={i} className="my-8">
                     <h1 className="xs-default text-text-label mb-4">{item.name}</h1>
-                    <div className="grid grid-cols-2 md:grid-cols-3 gap-5 max-w-80 md:max-w-none mx-auto">
+                    <div className="grid grid-cols-2 md:grid-cols-3 desktop:grid-cols-4 gap-5 max-w-none mx-auto">
                         {item.Category.map((item, i) => (
                             <div key={i}>
                                 <SimpleCard title={item.title} desc={item.desc} />

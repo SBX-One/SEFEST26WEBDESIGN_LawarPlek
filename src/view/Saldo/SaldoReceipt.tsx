@@ -18,7 +18,7 @@ export default function SaldoReceipt() {
     console.log(amount)
 
     return (
-        <div className="px-5">
+        <div className="px-5 max-w-205 md:mx-auto">
             <Menu back={-1} onclick={handleFinishReceipt} />
             <div className="mt-10">
                 <Bar title={userName} desc={userInput} iconR={ellipse} iconL={selectedMethod} iconRBorder={false} />
