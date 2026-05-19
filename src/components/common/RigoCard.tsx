@@ -17,7 +17,7 @@ export default function WWSCard({ title, date, desc, volume}: WWSCardProps   ) {
                 <h1 className="display text-text-action font-bold w-fit mx-auto"> 
                     {volume}
                 </h1>
-                <p className="md-default text-text-placeholder text-center">{desc}</p>
+                <p className="md-default text-text-placeholder text-center mt-2">{desc}</p>
             </div>
         </div>
     )

@@ -9,25 +9,24 @@ export default function FAQ() {
     const FAQData = [
         {
             title: "Sampah apa saja yang diterima?",
-            content:"Yes. It adheres to the WAI-ARIA design pattern."
+            content: "Kami menerima berbagai jenis sampah anorganik seperti plastik (botol, kantong, kemasan), kertas dan kardus, logam (kaleng, besi, aluminium), kaca, serta elektronik bekas (handphone, kabel, baterai). Untuk sampah organik seperti sisa makanan, saat ini kami belum melayani penjemputan — namun kamu bisa mengolahnya menjadi kompos di rumah."
         },
         {
             title: "Apakah ada batas minimum penjemputan?",
-            content:"Yes. It adheres to the WAI-ARIA design pattern."
+            content: "Ya, kami menetapkan berat minimum 2 kg per penjemputan agar proses logistik tetap efisien. Jika sampahmu belum mencapai 2 kg, kamu bisa menabungnya terlebih dahulu dan menjadwalkan penjemputan saat sudah cukup — atau kamu bisa langsung mengantarkan ke drop point terdekat tanpa batas minimum."
         },
         {
             title: "Apakah saya harus memilah sampah sendiri?",
-            content:"Yes. It adheres to the WAI-ARIA design pattern."
+            content: "Sebaiknya iya. Pemilahan sederhana — seperti memisahkan plastik, kertas, dan logam — sangat membantu proses daur ulang dan mempercepat verifikasi saat penjemputan. Namun jika kamu belum terbiasa, tim kami tetap akan membantu memilah di lokasi, meski proses penjemputan mungkin memakan waktu sedikit lebih lama."
         },
         {
-            title: "Sampah apa saja yang diterima?",
-            content:"Yes. It adheres to the WAI-ARIA design pattern."
+            title: "Berapa lama proses penjemputan setelah pemesanan?",
+            content: "Setelah kamu menjadwalkan penjemputan, petugas kami biasanya tiba dalam 1–2 hari kerja. Kamu akan mendapat notifikasi konfirmasi beserta estimasi waktu kedatangan melalui aplikasi atau WhatsApp. Untuk area di luar jangkauan rutin, waktu penjemputan bisa mencapai 3–4 hari kerja."
         },
         {
             title: "Bagaimana cara menghitung poinnya?",
-            content:"Yes. It adheres to the WAI-ARIA design pattern."
+            content: "Poin dihitung berdasarkan jenis dan berat sampah yang kamu setorkan. Sebagai gambaran: plastik mendapat 10 poin/kg, kertas 8 poin/kg, logam 15 poin/kg, dan elektronik dihitung per item. Poin yang terkumpul bisa ditukarkan dengan saldo e-wallet, voucher belanja, atau donasikan ke program lingkungan pilihan kami."
         },
-
     ]
 
     return (
