@@ -48,6 +48,9 @@ importers:
       '@eslint/js':
         specifier: ^9.32.0
         version: 9.39.2
+      '@types/aos':
+        specifier: ^3.0.8
+        version: 3.0.8
       '@types/bcryptjs':
         specifier: ^3.0.0
         version: 3.0.0
@@ -596,6 +599,9 @@ packages:
     resolution: {integrity: sha512-jVA+/UpKL1vRLg6Hkao5jldawNmRo7mQYrZtNHMIVpLfLhDml5nMRUo/8MwoX2vNXvnaXNNMedrMfMugAVX1nA==}
     peerDependencies:
       vite: ^5.2.0 || ^6 || ^7
+
+  '@types/aos@3.0.8':
+    resolution: {integrity: sha512-Wydvt0OnVYO5YZxroBOYITIkAKtKmni9GUQRKuWMK3doplBSaHU11HIIweGwqF/ycmbHQGoLUQzuXFRVY+Ougg==}
 
   '@types/bcryptjs@3.0.0':
     resolution: {integrity: sha512-WRZOuCuaz8UcZZE4R5HXTco2goQSI2XxjGY3hbM/xDvwmqFWd4ivooImsMx65OKM6CtNKbnZ5YL+YwAwK7c1dg==}
@@ -1852,6 +1858,8 @@ snapshots:
       '@tailwindcss/oxide': 4.1.18
       tailwindcss: 4.1.18
       vite: 7.3.0(jiti@2.6.1)(lightningcss@1.30.2)
+
+  '@types/aos@3.0.8': {}
 
   '@types/bcryptjs@3.0.0':
     dependencies:

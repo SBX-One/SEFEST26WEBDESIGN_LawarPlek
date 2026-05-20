@@ -11,9 +11,37 @@
 
 ## 📋 About
 
-**Green-Gold** is a web application developed by [SBX-One Studio](https://github.com/SBX-One), live at [greengold.sbxonestudio.com](https://greengold.sbxonestudio.com).
+**Green-Gold (Grigo)** adalah platform web-app integrasi ekonomi sirkular yang dirancang untuk mengatasi krisis pengelolaan sampah anorganik di kawasan perkotaan dengan memutus jalur konvensional "Kumpul-Angkut-Buang". Platform ini mengintegrasikan rantai pasok digital yang menghubungkan langsung tiga aktor utama: rumah tangga (produsen limbah), sektor informal/kurir (agregator), dan industri daur ulang (off-taker). Dengan dukungan fitur Scan & Waste untuk verifikasi cashback brand, layanan Penjemputan Aktif, serta mekanisme Monetisasi Sampah.
 
 ---
+
+## 🌐 Accessing the Project
+
+### Prerequisites
+
+- **Node.js** v18 or higher
+- **pnpm** (recommended) / npm / yarn
+
+### Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/SBX-One/SEFEST26WEBDESIGN_LawarPlek.git
+cd SEFEST26WEBDESIGN_LawarPlek
+
+# Install dependencies
+pnpm install
+```
+
+### Development
+
+```bash
+# Start development server
+pnpm dev
+```
+
+The app will run at `http://localhost:5173`.
+```
 
 ## 🚀 Tech Stack
 
@@ -39,73 +67,6 @@ Green-Gold/
 ├── tsconfig.json       # TypeScript configuration
 └── package.json        # Dependencies & scripts
 ```
-
----
-
-## ⚙️ Getting Started
-
-### Prerequisites
-
-- **Node.js** v18 or higher
-- **pnpm** (recommended) / npm / yarn
-
-### Installation
-
-```bash
-# Clone the repository
-git clone https://github.com/SBX-One/Green-Gold.git
-cd Green-Gold
-
-# Install dependencies
-pnpm install
-```
-
-### Development
-
-```bash
-# Start development server
-pnpm dev
-```
-
-The app will run at `http://localhost:5173`.
-
-### Build for Production
-
-```bash
-# Type-check and build
-pnpm build
-
-# Preview production build
-pnpm preview
-```
-
-### Lint
-
-```bash
-pnpm lint
-```
-
----
-
-## 🌐 Deployment
-
-The application is deployed and accessible at:
-
-**[https://greengold.sbxonestudio.com](https://greengold.sbxonestudio.com)**
-
----
-
-## 👥 Contributors
-
-<a href="https://github.com/SBX-One/Green-Gold/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=SBX-One/Green-Gold" />
-</a>
-
----
-
-## 📄 License
-
-This project is maintained by **SBX-One Studio**. All rights reserved.
 
 ---
 
