@@ -11,9 +11,7 @@ export default function ProdctList() {
     const { setSelectedProduct } = useTrash();
 
     const handleProductClick = (product: typeof products[0]) => {
-        // Simpan product ke context
         setSelectedProduct(product);
-        // Navigate ke halaman ItemCheckout dengan product name dan id di URL
         navigate(`/Checkout+Sampah/${product.title}/${product.id}`);
     };
 
