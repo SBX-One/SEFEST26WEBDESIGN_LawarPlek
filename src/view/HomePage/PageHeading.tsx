@@ -1,7 +1,6 @@
 import logo from "../../assets/svg/LogoMain.svg"
 import RigoButton from "../../components/ui/button/RigoButton"
 import CustomClassFunction from "../../function/CustomClassFunction"
-// import { useRef } from "react"
 import { useNavigate } from "react-router-dom";
 
 export default function PageHeading() {

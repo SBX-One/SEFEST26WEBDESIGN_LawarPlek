@@ -31,7 +31,7 @@ export default function GrigoFoundation() {
         <div className="border-2 border-border-default rounded-xl -mx-3 md:-mx-10 bg-neutral-white mt-32 ">
             <div className="pt-15 px-3 pb-15 md:pb-24 relative">
                 <div className="-mx-3 border-b-2 px-5 border-border-default mb-10">
-                    <div className="w-fit md:mx-auto">
+                    <div className="w-fit md:mx-auto">  
                         <LogoPill text="Grigo Foundation" />
                     </div>
                     <h1 id="mainTitle" className="h1-heading text-text-heading text-center py-8"> 

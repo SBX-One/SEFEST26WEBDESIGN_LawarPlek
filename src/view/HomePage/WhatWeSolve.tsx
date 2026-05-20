@@ -1,39 +1,9 @@
-import { useEffect, useRef } from "react"; // Tambahkan useEffect dan useRef
 import WWSCard from "../../components/common/RigoCard"
 import LogoPill from "../../components/common/LogoPill"
 import CustomClassFunction from "../../function/CustomClassFunction"
-import gsap from "gsap";
-import ScrollTrigger from "gsap/ScrollTrigger";
-import ScrambleTextPlugin from "gsap/ScrambleTextPlugin";
 
 export default function WhatWeSolve() {
     CustomClassFunction({CustomWidth: 768, CustomClass: "leading-normal", divRef:"WWSPara", RemoveCustomClass: "md-default"});
-    gsap.registerPlugin(ScrambleTextPlugin, ScrollTrigger);
-
-    const containerRef = useRef<HTMLDivElement | null>(null);
-
-    useEffect(() => {
-        if (containerRef.current) {
-            gsap.fromTo(
-                containerRef.current,
-                { 
-                    opacity: 0, 
-                    y: 40 
-                },
-                {
-                    opacity: 1,
-                    y: 0, 
-                    duration: 0.8,
-                    ease: "power2.out",
-                    scrollTrigger: {
-                        trigger: containerRef.current, 
-                        start: "top 85%",
-                        toggleActions: "play none none none" 
-                    }
-                }
-            );
-        }
-    }, []);
 
     const WWSCardData = [
         {
@@ -68,8 +38,7 @@ export default function WhatWeSolve() {
                 </p>
             </div>
             
-            {/* 3. Pasang ref ke div container card ini */}
-            <div ref={containerRef} className="flex flex-col gap-5 mt-10 desktop:flex-row">
+            <div className="flex flex-col gap-5 mt-10 desktop:flex-row">
                     {WWSCardData.map((data, i) => (
                             <WWSCard key={i} {...data} />
                     ))}
