@@ -20,15 +20,18 @@ export default function Navbar({ mode }: NavbarProps) {
     const HomeModeList = [
         {
             title: "Home",
-            links: () => navigate('/Home')
+            links: () => navigate('/Home'),
+            linkManual: "/Home"
         },
         {
             title: "Kamus",
-            links: () => navigate('/Kamus')
+            links: () => navigate('/Kamus'),
+            linkManual: "/Kamus"
         },
         {
             title: "Shop",
-            links: () => navigate('/Shop')
+            links: () => navigate('/Shop'),
+            linkManual: "/Shop"
         }
     ]
 
@@ -61,7 +64,7 @@ export default function Navbar({ mode }: NavbarProps) {
                     <div>
                         <div className="border-2 absolute bg-neutral-white rounded-3xl right-0 border-border-default w-2/3 p-5 flex flex-col gap-3">
                             {HomeModeList.map((item, i) => (
-                                <div key={i} onClick={item.links}>
+                                <div key={i} onClick={() => navigate(item.linkManual)}>
                                     <div className="xs-leading-normal text-text-label hover:text-text-action px-5 py-3.5 transition-all duration-100 hover:border-2 border-border-default rounded-2xl">
                                         <h1 className="">{item.title}</h1>
                                     </div>
